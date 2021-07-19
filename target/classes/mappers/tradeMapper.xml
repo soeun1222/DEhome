@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mappers.tradeMapper">
+<!-- 물품등록 -->
+<insert id="register_goods">
+	insert into USEDTRADE(USER_NICK
+						, CATEGORY
+						, TRADE_TITLE
+						, TRADE_CONTENT
+						, TRADE_DATE
+						, TRADE_COUNT
+						, TRADE_PRICE
+						, TRADE_EVALUE
+						, TRADE_PHOTO
+						, TRADE_COMPLETE
+						, TRADE_THUMB)
+	 		values(#{tr_user_nick}
+	 				, #{tr_category}
+	 				, #{tr_title}
+	 				, #{tr_content}
+	 				, now()
+	 				, 0
+	 				, #{tr_price}
+	 				, 0
+	 				, #{tr_photo}
+	 				, 0
+	 				, #{tr_thumb}
+	 		)
+</insert>
+
+<!-- 중고거래 리스트(메인화면) -->
+<select id="tradeList" resultType="TradeDTO" parameterType="TradeDTO" >
+	select t1.TRADE_NO as tr_no
+		, t1.USER_NICK as tr_user_nick
+		, t1.CATEGORY as tr_category
+		, t1.TRADE_TITLE as tr_title
+		, t1.TRADE_CONTENT as tr_content
+		, t1.TRADE_DATE as tr_date
+		, t1.TRADE_COUNT as tr_count
+		, t1.TRADE_EVALUE as tr_evalue
+		, format(t1.TRADE_PRICE,0) as tr_price
+		, t1.TRADE_PHOTO as tr_photo
+		, t1.TRADE_COMPLETE as tr_complete
+		, case when left(t2.USER_ADDR2,1) = '경' then substring_index(t2.USER_ADDR2,' ', 3) 
+				when left(t2.USER_ADDR2,1) = '전' then substring_index(t2.USER_ADDR2,' ', 3) 
+				when left(t2.USER_ADDR2,1) = '충' then substring_index(t2.USER_ADDR2,' ', 3) 
+				when left(t2.USER_ADDR2,1) = '강' then substring_index(t2.USER_ADDR2,' ', 3) 
+				else substring_index(t2.USER_ADDR2,' ', 2) 
+			end as user_addr2
+		from USEDTRADE t1, USER t2 
+		where t1.USER_NICK = t2.USER_NICK and TRADE_COMPLETE = 0 order by TRADE_NO desc
+		limit 0, 9
+</select>
+<!-- 중고거래 리스트(메인화면) 더보기 -->
+<select id="tradeListMore" resultType="TradeDTO" parameterType="TradeDTO" >
+	select t1.TRADE_NO as tr_no
+		, t1.USER_NICK as tr_user_nick
+		, t1.CATEGORY as tr_category
+		, t1.TRADE_TITLE as tr_title
+		, t1.TRADE_CONTENT as tr_content
+		, t1.TRADE_DATE as tr_date
+		, t1.TRADE_COUNT as tr_count
+		, t1.TRADE_EVALUE as tr_evalue
+		, format(t1.TRADE_PRICE,0) as tr_price
+		, t1.TRADE_PHOTO as tr_photo
+		, t1.TRADE_COMPLETE as tr_complete
+		, case when left(t2.USER_ADDR2,1) = '경' then substring_index(t2.USER_ADDR2,' ', 3) 
+				when left(t2.USER_ADDR2,1) = '전' then substring_index(t2.USER_ADDR2,' ', 3) 
+				when left(t2.USER_ADDR2,1) = '충' then substring_index(t2.USER_ADDR2,' ', 3) 
+				when left(t2.USER_ADDR2,1) = '강' then substring_index(t2.USER_ADDR2,' ', 3) 
+				else substring_index(t2.USER_ADDR2,' ', 2) 
+			end as user_addr2
+		from USEDTRADE t1, USER t2 
+		where t1.USER_NICK = t2.USER_NICK and TRADE_COMPLETE = 0 order by TRADE_NO desc
+		limit #{startPage}, 3
+</select>
+
+<!-- 중고거래 리스트(메인화면)카테고리 -->
+<select id="tradeListCategory" resultType="TradeDTO" parameterType="TradeDTO" >
+	select t1.TRADE_NO as tr_no
+		, t1.USER_NICK as tr_user_nick
+		, t1.CATEGORY as tr_category
+		, t1.TRADE_TITLE as tr_title
+		, t1.TRADE_CONTENT as tr_content
+		, t1.TRADE_DATE as tr_date
+		, t1.TRADE_COUNT as tr_count
+		, t1.TRADE_EVALUE as tr_evalue
+		, format(t1.TRADE_PRICE,0) as tr_price
+		, t1.TRADE_PHOTO as tr_photo
+		, t1.TRADE_COMPLETE as tr_complete
+		, case when left(t2.USER_ADDR2,1) = '경' then substring_index(t2.USER_ADDR2,' ', 3) 
+				when left(t2.USER_ADDR2,1) = '전' then substring_index(t2.USER_ADDR2,' ', 3) 
+				when left(t2.USER_ADDR2,1) = '충' then substring_index(t2.USER_ADDR2,' ', 3) 
+				when left(t2.USER_ADDR2,1) = '강' then substring_index(t2.USER_ADDR2,' ', 3) 
+				else substring_index(t2.USER_ADDR2,' ', 2) 
+			end as user_addr2
+		from USEDTRADE t1, USER t2 
+		where t1.USER_NICK = t2.USER_NICK and TRADE_COMPLETE = 0 and CATEGORY = #{category}
+		order by TRADE_NO desc
+		limit 0, 9
+</select>
+
+<!-- 중고거래 리스트(메인화면)카테고리별 더보기 -->
+<select id="tradeListCategoryMore" resultType="TradeDTO" parameterType="TradeDTO" >
+	select t1.TRADE_NO as tr_no
+		, t1.USER_NICK as tr_user_nick
+		, t1.CATEGORY as tr_category
+		, t1.TRADE_TITLE as tr_title
+		, t1.TRADE_CONTENT as tr_content
+		, t1.TRADE_DATE as tr_date
+		, t1.TRADE_COUNT as tr_count
+		, t1.TRADE_EVALUE as tr_evalue
+		, format(t1.TRADE_PRICE,0) as tr_price
+		, t1.TRADE_PHOTO as tr_photo
+		, t1.TRADE_COMPLETE as tr_complete
+		, case when left(t2.USER_ADDR2,1) = '경' then substring_index(t2.USER_ADDR2,' ', 3) 
+				when left(t2.USER_ADDR2,1) = '전' then substring_index(t2.USER_ADDR2,' ', 3) 
+				when left(t2.USER_ADDR2,1) = '충' then substring_index(t2.USER_ADDR2,' ', 3) 
+				when left(t2.USER_ADDR2,1) = '강' then substring_index(t2.USER_ADDR2,' ', 3) 
+				else substring_index(t2.USER_ADDR2,' ', 2) 
+			end as user_addr2
+		from USEDTRADE t1, USER t2 
+		where t1.USER_NICK = t2.USER_NICK and TRADE_COMPLETE = 0 and CATEGORY = #{category}
+		order by trade_no desc
+		limit #{startPage}, 3
+</select>
+
+<!-- 동네 검색했을때 리스트 출력 -->
+<select id="tradeList_search" resultType="TradeDTO" parameterType="TradeDTO">
+select t1.TRADE_NO as tr_no
+	, t1.USER_NICK as tr_user_nick
+	, t1.CATEGORY as tr_category
+	, t1.TRADE_TITLE as tr_title
+	, t1.TRADE_CONTENT as tr_content
+	, t1.TRADE_DATE as tr_date
+	, t1.TRADE_COUNT as tr_count
+	, t1.TRADE_EVALUE as tr_evalue
+	, format(t1.TRADE_PRICE,0) as tr_price
+	, t1.TRADE_PHOTO as tr_photo
+	, t1.TRADE_COMPLETE as tr_complete
+	, case when left(t2.USER_ADDR2,1) = '경' then substring_index(t2.USER_ADDR2,' ', 3) 
+			when left(t2.USER_ADDR2,1) = '전' then substring_index(t2.USER_ADDR2,' ', 3) 
+			when left(t2.USER_ADDR2,1) = '충' then substring_index(t2.USER_ADDR2,' ', 3) 
+			when left(t2.USER_ADDR2,1) = '강' then substring_index(t2.USER_ADDR2,' ', 3) 
+	else substring_index(t2.USER_ADDR2,' ', 2) 
+	end as user_addr2
+	from USEDTRADE t1, USER t2 
+	where t1.USER_NICK = t2.USER_NICK and TRADE_COMPLETE = 0 and t2.USER_ADDR2 like concat('%',#{search_area},'%') 
+	order by trade_no desc
+</select>
+
+<select id="tradeShow" resultType="TradeDTO" parameterType="TradeDTO">
+	select  TRADE_NO as tr_no
+			, USER_NICK as tr_user_nick
+			, TRADE_PHOTO as tr_photo
+			, TRADE_TITLE as tr_title
+			, TRADE_CONTENT as tr_content
+			, TRADE_DATE as tr_date
+			, year(now()) - year(trade_date) as year
+			, month(now()) - month(trade_date) as month
+			, day(now()) - day(trade_date) as day
+			, hour(now()) - hour(trade_date) as hour
+			, minute(now()) - minute(trade_date) as minute
+			, second(now()) - second(trade_date) as second
+			, TRADE_COUNT as tr_count
+			, TRADE_EVALUE as tr_evalue
+			, format(TRADE_PRICE,0) as tr_price
+			, CATEGORY as tr_category
+			, TRADE_COMPLETE as tr_complete
+	 from USEDTRADE
+	 where TRADE_NO = #{tr_no}
+</select>
+<!-- 주소 얻기 -->
+<select id="getAddr2" parameterType="UserDTO" resultType="string">
+	select case when left(USER_ADDR2,1) = '경' then substring_index(USER_ADDR2,' ', 3) 
+			when left(USER_ADDR2,1) = '전' then substring_index(USER_ADDR2,' ', 3) 
+			when left(USER_ADDR2,1) = '충' then substring_index(USER_ADDR2,' ', 3) 
+			when left(USER_ADDR2,1) = '강' then substring_index(USER_ADDR2,' ', 3) 
+	else substring_index(USER_ADDR2,' ', 2) 
+	end as user_addr2 
+	from USER where USER_NICK = #{user_nick}
+</select>
+<!-- 조회수 증가 -->
+<update id="setCount">
+	update USEDTRADE set TRADE_COUNT = TRADE_COUNT+1 where TRADE_NO = #{tr_no}
+</update>
+
+<!-- 거래완료로 바뀌게 함-->
+<update id="completeChange">
+	update USEDTRADE set TRADE_COMPLETE = 1 where TRADE_NO = #{tr_no}
+</update>
+
+<update id="completeAdd">
+	update USEDTRADE set TRADE_BUYER = #{tr_buyer} where TRADE_NO = #{tr_no}
+</update>
+
+<insert id="heartIN">
+	insert into TR_INTEREST values( #{tr_no}, #{tr_user_nick}, 1)
+</insert>
+
+<select id="heartCheck" parameterType="UserDTO" resultType="int">
+	select count(*) from TR_INTEREST where TRADE_NO = #{tr_no} and USER_NICK = #{tr_user_nick}
+</select>
+
+<select id="heartCount" parameterType="UserDTO" resultType="int">
+	select count(*) from TR_INTEREST where TRADE_NO = #{tr_no}
+</select>
+<!-- 중고물품 수정 폼으로 가져갈 데이터값들 -->
+<select id="tradeShowEdit" resultType="TradeDTO" parameterType="TradeDTO">
+	select  TRADE_NO as tr_no
+			, USER_NICK as tr_user_nick
+			, TRADE_PHOTO as tr_photo
+			, TRADE_TITLE as tr_title
+			, TRADE_CONTENT as tr_content
+			, year(now()) - year(trade_date) as year
+			, month(now()) - month(trade_date) as month
+			, day(now()) - day(trade_date) as day
+			, hour(now()) - hour(trade_date) as hour
+			, minute(now()) - minute(trade_date) as minute
+			, second(now()) - second(trade_date) as second
+			, TRADE_COUNT as tr_count
+			, TRADE_EVALUE as tr_evalue
+			, TRADE_PRICE as tr_price
+			, CATEGORY as tr_category
+			, TRADE_COMPLETE as tr_complete
+	 from USEDTRADE
+	 where TRADE_NO = #{tr_no}
+</select>
+<update id="update_goods">
+	update USEDTRADE set CATEGORY =  #{tr_category}
+	 					, TRADE_TITLE = #{tr_title}
+		 				, TRADE_CONTENT = #{tr_content}
+	 					, TRADE_PRICE = #{tr_price}
+	 					, TRADE_THUMB = #{tr_thumb}
+	where TRADE_NO = #{tr_no}
+</update>
+<update id="update_goods_photo">
+	update USEDTRADE set TRADE_PHOTO =  #{tr_photo}
+	where TRADE_NO = #{tr_no}
+</update>
+<delete id="delete_goods_interest">
+	delete from TR_INTEREST where TRADE_NO = #{tr_no}
+</delete>
+<delete id="delete_goods">
+	delete from USEDTRADE where TRADE_NO = #{tr_no}
+</delete>
+<delete id="delete_chat">
+	delete from TRADE_CHAT where TRADE_NO = #{tr_no}
+</delete>
+</mapper>
+
+
+
+
+
+
+
+
+

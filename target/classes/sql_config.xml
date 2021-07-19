@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias type="com.green.dehome.dto.UserDTO" alias="UserDTO"/>
+		<typeAlias type="com.green.dehome.dto.TradeDTO" alias="TradeDTO"/>
+		<typeAlias type="com.green.dehome.dto.InteriorDTO" alias="InteriorDTO"/>
+		<typeAlias type="com.green.dehome.dto.InteriorTipDTO" alias="InteriorTipDTO"/>
+		<typeAlias type="com.green.dehome.dto.TradeBoardDTO" alias="TradeBoardDTO"/>
+		<typeAlias type="com.green.dehome.dto.NoticeDTO" alias="NoticeDTO"/>
+		<typeAlias type="com.green.dehome.dto.ChatDTO" alias="chatDTO"/>
+		<typeAlias type="com.green.dehome.dto.MyPageUl2DTO" alias="MyPageUl2DTO"/>
+		<typeAlias alias="MypageDTO" type="com.green.dehome.dto.MypageDTO"/>
+		<typeAlias alias="InteriorReviewDTO" type="com.green.dehome.dto.InteriorReviewDTO"/>
+		<typeAlias alias="MyTradeDTO" type="com.green.dehome.dto.MyTradeDTO"/>
+		<typeAlias alias="CustomerDTO" type="com.green.dehome.dto.CustomerDTO"/>
+	</typeAliases>
+</configuration>

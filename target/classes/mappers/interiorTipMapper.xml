@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mappers.interiorTipMapper">
+	<!-- 인테리어 카테고리 별 팁 전체 리스트 출력 -->
+	<select id="tipListConstruct" resultType="InteriorTipDTO">
+		SELECT 
+			  TIP_NO as tip_no
+			, USER_NICK as tip_user_nick
+			, CATEGORY as tip_category
+			, TIP_TITLE as tip_title
+			, TIP_CONTENT as tip_content
+			, TIP_FILE as tip_file
+			, TIP_DATE as tip_date
+			, TIP_COUNT as tip_count
+			, TIP_BOOKMARK as tip_bookmark
+			, TIP_BMUSER as tip_bmuser
+		FROM 
+			INTERIOR_TIP
+		WHERE
+			CATEGORY = 'construct'
+		ORDER BY 
+			TIP_COUNT DESC
+		LIMIT 0, 4
+	</select>
+	<select id="tipListStorage" resultType="InteriorTipDTO">
+		SELECT 
+			  TIP_NO as tip_no
+			, USER_NICK as tip_user_nick
+			, CATEGORY as tip_category
+			, TIP_TITLE as tip_title
+			, TIP_CONTENT as tip_content
+			, TIP_FILE as tip_file
+			, TIP_DATE as tip_date
+			, TIP_COUNT as tip_count
+			, TIP_BOOKMARK as tip_bookmark
+			, TIP_BMUSER as tip_bmuser
+		FROM 
+			INTERIOR_TIP
+		WHERE
+			CATEGORY = 'storage'
+		ORDER BY 
+			TIP_COUNT DESC
+		LIMIT 0, 4
+	</select>
+	<select id="tipListDecorate" resultType="InteriorTipDTO">
+		SELECT 
+			  TIP_NO as tip_no
+			, USER_NICK as tip_user_nick
+			, CATEGORY as tip_category
+			, TIP_TITLE as tip_title
+			, TIP_CONTENT as tip_content
+			, TIP_FILE as tip_file
+			, TIP_DATE as tip_date
+			, TIP_COUNT as tip_count
+			, TIP_BOOKMARK as tip_bookmark
+			, TIP_BMUSER as tip_bmuser
+		FROM 
+			INTERIOR_TIP
+		WHERE
+			CATEGORY = 'decorate'
+		ORDER BY 
+			TIP_COUNT DESC
+		LIMIT 0, 4
+	</select>
+	<select id="tipListCleaning" resultType="InteriorTipDTO">
+		SELECT 
+			  TIP_NO as tip_no
+			, USER_NICK as tip_user_nick
+			, CATEGORY as tip_category
+			, TIP_TITLE as tip_title
+			, TIP_CONTENT as tip_content
+			, TIP_FILE as tip_file
+			, TIP_DATE as tip_date
+			, TIP_COUNT as tip_count
+			, TIP_BOOKMARK as tip_bookmark
+			, TIP_BMUSER as tip_bmuser
+		FROM 
+			INTERIOR_TIP
+		WHERE
+			CATEGORY = 'cleaning'
+		ORDER BY 
+			TIP_COUNT DESC
+		LIMIT 0, 4
+	</select>
+	<select id="tipListDiy" resultType="InteriorTipDTO">
+		SELECT 
+			  TIP_NO as tip_no
+			, USER_NICK as tip_user_nick
+			, CATEGORY as tip_category
+			, TIP_TITLE as tip_title
+			, TIP_CONTENT as tip_content
+			, TIP_FILE as tip_file
+			, TIP_DATE as tip_date
+			, TIP_COUNT as tip_count
+			, TIP_BOOKMARK as tip_bookmark
+			, TIP_BMUSER as tip_bmuser
+		FROM 
+			INTERIOR_TIP
+		WHERE
+			CATEGORY = 'diy'
+		ORDER BY 
+			TIP_COUNT DESC
+		LIMIT 0, 4
+	</select>
+	<select id="tipListReform" resultType="InteriorTipDTO">
+		SELECT 
+			  TIP_NO as tip_no
+			, USER_NICK as tip_user_nick
+			, CATEGORY as tip_category
+			, TIP_TITLE as tip_title
+			, TIP_CONTENT as tip_content
+			, TIP_FILE as tip_file
+			, TIP_DATE as tip_date
+			, TIP_COUNT as tip_count
+			, TIP_BOOKMARK as tip_bookmark
+			, TIP_BMUSER as tip_bmuser
+		FROM 
+			INTERIOR_TIP
+		WHERE
+			CATEGORY = 'reform'
+		ORDER BY 
+			TIP_COUNT DESC
+		LIMIT 0, 4
+	</select>
+	<select id="tipListKitchen" resultType="InteriorTipDTO">
+		SELECT 
+			  TIP_NO as tip_no
+			, USER_NICK as tip_user_nick
+			, CATEGORY as tip_category
+			, TIP_TITLE as tip_title
+			, TIP_CONTENT as tip_content
+			, TIP_FILE as tip_file
+			, TIP_DATE as tip_date
+			, TIP_COUNT as tip_count
+			, TIP_BOOKMARK as tip_bookmark
+			, TIP_BMUSER as tip_bmuser
+		FROM 
+			INTERIOR_TIP
+		WHERE
+			CATEGORY = 'kitchen'
+		ORDER BY 
+			TIP_COUNT DESC
+		LIMIT 0, 4
+	</select>
+	<select id="tipListLighting" resultType="InteriorTipDTO">
+		SELECT 
+			  TIP_NO as tip_no
+			, USER_NICK as tip_user_nick
+			, CATEGORY as tip_category
+			, TIP_TITLE as tip_title
+			, TIP_CONTENT as tip_content
+			, TIP_FILE as tip_file
+			, TIP_DATE as tip_date
+			, TIP_COUNT as tip_count
+			, TIP_BOOKMARK as tip_bookmark
+			, TIP_BMUSER as tip_bmuser
+		FROM 
+			INTERIOR_TIP
+		WHERE
+			CATEGORY = 'lighting'
+		ORDER BY 
+			TIP_COUNT DESC
+		LIMIT 0, 4
+	</select>
+	
+	<!-- 카테고리 별 인테리어 팁 출력  -->
+	<select id="tipListCategory" resultType="InteriorTipDTO" parameterType="InteriorTipDTO">
+		SELECT 
+			  TIP_NO as tip_no
+			, USER_NICK as tip_user_nick
+			, CATEGORY as tip_category
+			, TIP_TITLE as tip_title
+			, TIP_CONTENT as tip_content
+			, TIP_FILE as tip_file
+			, TIP_DATE as tip_date
+			, TIP_COUNT as tip_count
+			, TIP_BOOKMARK as tip_bookmark
+			, TIP_BMUSER as tip_bmuser
+		FROM 
+			INTERIOR_TIP
+		WHERE
+			CATEGORY = #{category}
+		ORDER BY 
+			TIP_COUNT DESC
+	</select>
+	
+	<!-- 인테리어팁 작성 -->
+	<insert id="tipWrite">
+		INSERT INTO 
+			INTERIOR_TIP (
+				  TIP_NO
+				, USER_NICK
+				, CATEGORY
+				, TIP_TITLE
+				, TIP_CONTENT
+				, TIP_FILE
+				, TIP_DATE
+				, TIP_COUNT
+				, TIP_BOOKMARK
+				, TIP_THUMB
+			)
+		VALUES(
+			  #{tip_no}
+			, #{tip_user_nick}
+			, #{tip_category}
+			, #{tip_title}
+			, #{tip_content}
+			, #{tip_file}
+			, NOW()
+			, #{tip_count}
+			, #{tip_bookmark}
+			, #{tip_thumb})
+	</insert>
+	
+	<!-- 인테리어팁 상세페이지 -->
+	<select id="tipListPage" resultType="InteriorTipDTO" parameterType="InteriorTipDTO">
+		SELECT  
+			  TIP_NO as tip_no
+			, USER_NICK as tip_user_nick
+			, CATEGORY as tip_category
+			, TIP_TITLE as tip_title
+			, TIP_CONTENT as tip_content
+			, TIP_FILE as tip_file
+			, YEAR(NOW()) - YEAR(TIP_DATE) AS YEAR
+			, MONTH(NOW()) - MONTH(TIP_DATE) AS MONTH
+			, DAY(NOW()) - DAY(TIP_DATE) AS DAY
+			, HOUR(NOW()) - HOUR(TIP_DATE) AS HOUR
+			, MINUTE(NOW()) - MINUTE(TIP_DATE) AS MINUTE
+			, SECOND(NOW()) - SECOND(TIP_DATE) AS SECOND
+			, TIP_COUNT as tip_count
+			, TIP_BOOKMARK as tip_bookmark
+		FROM 
+			INTERIOR_TIP 
+		WHERE 
+			TIP_NO = #{tip_no}
+	</select>
+	
+	<!-- 조회수 증가 -->
+	<update id="setCount">
+		UPDATE 
+			INTERIOR_TIP 
+		SET 
+			TIP_COUNT = TIP_COUNT + 1 
+		WHERE 
+			TIP_NO = #{tip_no}
+	</update>
+	
+	<!-- 해당 유저 북마크 클릭 유무 -->
+	<select id="bmOnOff" resultType="InteriorTipDTO" parameterType="InteriorTipDTO">
+		SELECT 
+			  TIP_NO as tip_no
+			, USER_NICK as tip_user_nick
+		FROM
+			BOOKMARK
+		WHERE 
+			TIP_NO = #{tip_no}
+		AND
+			USER_NICK = #{tip_user_nick}
+	</select>
+	
+	<!-- 북마크 등록 시 북마크 테이블에 업데이트 -->
+	<insert id="bmOn" parameterType="InteriorTipDTO">
+		INSERT INTO
+			BOOKMARK( 
+				  TIP_NO
+				, USER_NICK)
+		VALUES(
+			  #{tip_no}
+			, #{tip_user_nick})
+	</insert>
+	
+	<!-- 북마크가 0일때 북마크 등록 시 컬럼에 닉네임 저장 -->
+	<update id="bmUpdate" parameterType="InteriorTipDTO">
+		UPDATE
+			INTERIOR_TIP
+		SET
+			TIP_BMUSER = #{tip_user_nick}
+		WHERE 
+			TIP_NO = #{tip_no}
+	</update>
+	
+	<!-- 북마크가 0이 아닐때 북마크 등록 시 컬럼에 닉네임 추가 저장 -->
+	<update id="bmUpdateCon" parameterType="InteriorTipDTO">
+		UPDATE
+			INTERIOR_TIP
+		SET
+			TIP_BMUSER = CONCAT(TIP_BMUSER, '_', #{tip_user_nick})
+		WHERE
+			TIP_NO = #{tip_no}
+	</update>
+	
+	<!-- 북마크 등록 취소 시 북마크 테이블에서 삭제 -->
+	<insert id="bmOff" parameterType="InteriorTipDTO">
+		DELETE 
+		FROM
+			BOOKMARK
+		WHERE 
+			USER_NICK = #{tip_user_nick}
+		AND
+			TIP_NO = #{tip_no}
+	</insert>
+	
+	<!-- 북마크가 1 일때 북마크 등록 취소 시 닉네임 제거 -->
+	<update id="bmReplaceOne" parameterType="InteriorTipDTO">
+		UPDATE
+			INTERIOR_TIP
+		SET
+			TIP_BMUSER = REPLACE(TIP_BMUSER, '', null)
+		WHERE
+			TIP_NO = #{tip_no}
+	</update>
+	
+	<!-- 북마크가 2 이상일때 북마크 등록 취소 시 닉네임 제거 -->
+	<update id="bmReplace" parameterType="InteriorTipDTO">
+		UPDATE
+			INTERIOR_TIP
+		SET
+			TIP_BMUSER = REPLACE(TIP_BMUSER, CONCAT('_', #{tip_user_nick}), '')
+		WHERE
+			TIP_NO = #{tip_no}
+	</update>
+	
+	<!-- 북마크 등록 시 북마크 수 증가 -->
+	<update id="bmCountUp" parameterType="InteriorTipDTO">
+		UPDATE
+			INTERIOR_TIP
+		SET
+			TIP_BOOKMARK = TIP_BOOKMARK + 1
+		WHERE 
+			TIP_NO = #{tip_no}
+	</update>
+	
+	<!-- 북마크 등록 취소 시 북마크 수 차감 -->
+	<update id="bmCountDown" parameterType="InteriorTipDTO">
+		UPDATE
+			INTERIOR_TIP
+		SET
+			TIP_BOOKMARK = TIP_BOOKMARK - 1
+		WHERE
+			TIP_NO = #{tip_no}
+	</update>
+	
+	<!-- 북마크 등록 개수 출력 -->
+	<select id="bmCount" resultType="String" parameterType="InteriorTipDTO">
+		SELECT
+			TIP_BOOKMARK as tip_bookmark
+		FROM
+			INTERIOR_TIP
+		WHERE
+			TIP_NO = #{tip_no}
+	</select>
+</mapper>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mappers.customerMapper">
+
+	<!-- qna:작성,수정,삭제,조회(list, show) qna_c:작성,수정,삭제,조회(list, show)-관리자만 notice:작성,수정,삭제,조회(list,show)-관리자만 -->
+	<!-- QnA작성 -->
+	<insert id="qna_insert">
+		insert into QNA values(
+		#{qna_no}
+		, #{user_nick}
+		, #{qna_title}
+		, #{qna_content}
+		, now()
+		, 0
+		, #{qna_type}
+		, #{qna_pw}
+		, #{qna_process})
+	</insert>
+
+	<!-- QnA목록보기 -->
+	<select id="qna_list" parameterType="int"
+		resultType="CustomerDTO">
+		select QNA_NO
+		, USER_NICK
+		, QNA_TITLE
+		, QNA_CONTENT
+		, QNA_DATE
+		, QNA_COUNT
+		, QNA_TYPE
+		, QNA_PW
+		, QNA_PROCESS from QNA order by QNA_NO
+		desc
+		limit #{startIndex}, 10
+	</select>
+	<!-- 게시물 총 갯수 -->
+	<select id="count" resultType="int">
+		select count(QNA_NO) from QNA
+	</select>
+
+	<!-- QnA조회 -->
+	<select id="qna_show" resultType="CustomerDTO">
+		select QNA_TITLE
+		, QNA_NO
+		, QNA_CONTENT
+		, QNA_DATE
+		, QNA_COUNT
+		, USER_NICK
+		from QNA
+		where QNA_NO =
+		#{qna_no}
+	</select>
+
+	<!-- QnA조회수증가 -->
+	<update id="qna_hitUp">
+		update QNA set
+		QNA_COUNT = QNA_COUNT+1
+		where QNA_NO = #{qna_no}
+	</update>
+
+	<!-- QnA조회수조회 -->
+	<select id="qna_getHit" resultType="int" parameterType="int">
+		select QNA_COUNT from QNA where QNA_NO = #{qna_no}
+	</select>
+
+	<!-- QnA수정 -->
+	<update id="qna_modify" parameterType="CustomerDTO">
+		update QNA set
+		QNA_TITLE=#{qna_title}
+		, QNA_CONTENT=#{qna_content}
+		, QNA_TYPE=#{qna_type} where QNA_NO = #{qna_no}
+	</update>
+
+	<!-- QnA삭제 -->
+	<delete id="qna_delete" parameterType="CustomerDTO">
+		delete from QNA where
+		QNA_NO = #{qna_no}
+	</delete>
+
+
+	<!-- QnA_C작성 -->
+	<insert id="qna_c_insert">
+		insert into QNA_C values(
+		#{qna_no} 
+		, #{user_nick2}
+		, #{qna_c_content}
+		, now())
+	</insert>
+
+	<!-- qna_process변경 -->
+	<update id="qna_c_processing" parameterType="CustomerDTO">
+		update QNA set
+		QNA_PROCESS = 'complete'
+		where QNA_NO = #{qna_no} 
+	</update>
+
+	<!-- QnA_C조회 -->
+	<select id="qna_c_show" resultType="CustomerDTO">
+		select
+			USER_NICK2
+			, QNA_C_CONTENT
+			, QNA_C_DATE
+		from QNA_C
+		where QNA_NO =
+		#{qna_no}
+	</select>
+	
+	<!-- QnA_C수정 -->
+	<update id="qna_c_modify" parameterType="CustomerDTO">
+		update QNA_C set
+			QNA_C_CONTENT=#{qna_c_content}
+		where QNA_NO = #{qna_no}
+	</update>
+
+	<!-- QnA_C삭제 -->
+	<delete id="qna_c_delete" parameterType="CustomerDTO">
+		delete from QNA_C 
+		where QNA_NO = #{qna_no}
+	</delete>
+	
+	<!-- QnA_C 프로세싱복구 -->
+	<update id="qna_c_processing_re" parameterType="CustomerDTO">
+		update QNA set
+		QNA_PROCESS = 'processing'
+		where QNA_NO = #{qna_no}
+	</update>
+
+
+
+	<!-- Notice작성 -->
+	<insert id="not_insert">
+		insert into NOTICE values(
+		#{not_no}
+		, #{user_nick}
+		, #{not_title}
+		, #{not_content}
+		, now()
+		, 0
+		, #{not_menu})
+	</insert>
+
+	<!-- Notice목록보기 -->
+	<select id="not_list" parameterType="int"
+		resultType="CustomerDTO">
+		select NOT_NO
+		, USER_NICK
+		, NOT_TITLE
+		, NOT_CONTENT
+		, NOT_DATE
+		, NOT_COUNT
+		, NOT_MENU
+		from NOTICE
+		order by NOT_NO desc
+		limit
+		#{startIndex}, 10
+	</select>
+
+	<!-- Notice조회 -->
+	<select id="not_show" resultType="CustomerDTO">
+		select NOT_TITLE
+		, NOT_NO
+		, NOT_CONTENT
+		, NOT_DATE
+		, NOT_COUNT
+		, USER_NICK
+		, NOT_MENU
+		from NOTICE
+		where
+		NOT_NO = #{not_no}
+	</select>
+
+	<!-- Notice수정 -->
+	<update id="not_modify" parameterType="CustomerDTO">
+		update NOTICE set
+		NOT_TITLE=#{not_title}
+		, NOT_CONTENT=#{not_content}
+		, NOT_MENU=#{not_menu}
+		where NOT_NO = #{not_no}
+	</update>
+
+	<!-- Notice삭제 -->
+	<delete id="not_delete" parameterType="CustomerDTO">
+		delete from NOTICE where
+		NOT_NO = #{not_no}
+	</delete>
+
+	<!-- notice조회수증가 -->
+	<update id="not_hitUp">
+		update NOTICE set
+		NOT_COUNT = not_count+1
+		where NOT_NO = #{not_no}
+	</update>
+
+	<!-- notice조회수조회 -->
+	<select id="not_getHit" resultType="int" parameterType="int">
+		select NOT_COUNT from NOTICE where NOT_NO = #{not_no}
+	</select>
+</mapper>

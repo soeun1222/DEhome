@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mappers.tradeBoardMapper">
+
+<!-- 자유게시판 글쓰기 -->
+<insert id="writeTradeBoard" parameterType="TradeBoardDTO">
+	INSERT INTO TRADE_BOARD( BOARD_ID, USER_NICK, BOARD_TITLE, BOARD_CONTENT, BOARD_DATE, BOARD_COUNT) 
+					VALUES(#{board_id}
+							, #{user_nick} 
+							, #{board_title}
+							, #{board_content}
+							, NOW()
+							, 0)
+
+</insert>
+
+
+<!-- 자유게시판 글목록 -->
+<select id="tradeBoardList" parameterType="int" resultType="TradeBoardDTO">
+	SELECT BOARD_ID, USER_NICK, BOARD_TITLE, BOARD_CONTENT, BOARD_DATE, BOARD_COUNT, BOARD_PW, BOARD_PAGENUM 
+		FROM TRADE_BOARD 
+	ORDER BY BOARD_ID DESC 
+	 LIMIT #{startIndex}, #{pageSize} 
+</select>
+	<!---->	 
+
+<!-- 자유게시판 글 가져오기-->
+<select id="showTradeBoard"  parameterType="int" resultType="TradeBoardDTO">
+	select BOARD_ID, USER_NICK, BOARD_TITLE, BOARD_CONTENT, BOARD_DATE, BOARD_COUNT, BOARD_PW, BOARD_PAGENUM
+		FROM TRADE_BOARD 
+	 WHERE BOARD_ID = #{board_id}
+</select>
+
+<!-- 자유게시판 글 가져오기 : 조회수 증가 -->
+<select id="updateHit" parameterType="int" resultType="TradeBoardDTO">
+	UPDATE TRADE_BOARD 
+		SET BOARD_COUNT = BOARD_COUNT +1 
+	WHERE BOARD_ID = #{board_id}
+</select>
+
+<!-- 글 조회수  -->
+<select id="getHit" resultType="int" parameterType="int">
+	SELECT BOARD_COUNT
+		FROM TRADE_BOARD 
+	WHERE BOARD_ID = #{board_id}
+</select>
+
+<!-- 자유게시판 글수정 -->
+<update id="editTradeBoard" parameterType="TradeBoardDTO">
+	UPDATE TRADE_BOARD 
+		SET BOARD_TITLE = #{board_title},
+			BOARD_CONTENT = #{board_content},
+			BOARD_DATE = NOW()
+		WHERE BOARD_ID = #{board_id}
+</update>
+
+
+<!-- 게시물 삭제  -->
+<delete id="deleteTradeBoard" parameterType="int">
+	DELETE 
+		FROM TRADE_BOARD
+	WHERE BOARD_ID = #{board_id} 
+</delete>
+
+<!-- 게시물 조회수 -->
+<update id="hitUp">
+	UPDATE TRADE_BOARD 
+		SET BOARD_COUNT = BOARD_COUNT +1 
+		WHERE BOARD_ID = #{board_id}
+</update>
+
+
+
+
+
+<!-- 페이징 처리 후 게시글 조회 -->
+<select id="selectBoard" resultType="TradeBoardDTO">
+	SELECT
+		BOARD_ID, USER_NICK, BOARD_TITLE, BOARD_CONTENT, BOARD_DATE, BOARD_COUNT
+	FROM TRADE_BOARD
+	ORDER BY BOARD_ID DESC
+	LIMIT #{startIndex}, 10
+</select>
+
+
+<!-- 게시물 총 갯수 -->
+<select id="count" resultType="int">
+	SELECT COUNT(BOARD_ID) FROM TRADE_BOARD
+</select>
+
+
+
+
+
+<!-- 게시물 목록 + 페이징 -->
+<select id="listPage" parameterType="hashMap" resultType="TradeBoardDTO">
+ SELECT
+	BOARD_ID, USER_NICK, BOARD_TITLE, BOARD_CONTENT, BOARD_DATE, BOARD_COUNT
+ FROM TRADE_BOARD
+ ORDER BY BOARD_ID DESC
+ LIMIT #{displayPost}, #{postNum}
+</select>
+
+
+<select id="pageCount"
+        parameterType="map"
+        resultType="int">
+	SELECT
+		COUNT(*) "CNT"
+	FROM TRADE_BOARD
+</select>
+
+<select id="searchBoard"
+        parameterType="map"
+        resultType="TradeBoardDTO">
+	SELECT
+		BOARD_ID, USER_NICK, BOARD_TITLE, BOARD_CONTENT, BOARD_DATE
+	FROM TRADE_BOARD
+	LIMIT #{offset}, #{limit}
+</select>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mappers.mypageMapper">
+
+<!-- 회원정보 수정 -->
+<select id="getUser" parameterType="String" resultType="MypageDTO">
+	SELECT * FROM USER
+		 WHERE USER_NICK = #{user_nick}
+</select>
+
+<update id="editUser" parameterType="MypageDTO" >
+	UPDATE USER 
+		SET USER_PW = #{user_pw}
+			, USER_PNUM = #{user_pnum}
+			, USER_ADDR = #{user_addr}
+			, USER_ADDR2 = #{user_addr2}
+			, USER_ADDR3 = #{user_addr3}
+			, USER_ADDR4 = #{user_addr4}
+		WHERE USER_NICK = #{user_nick}
+</update>
+
+<select id="getPw" parameterType="string" resultType="string">
+	SELECT USER_PW 
+		FROM USER 
+	WHERE USER_NICK = #{user_nick}
+</select>
+
+
+<!-- 회원탈퇴 -->
+<delete id="deleteUser" parameterType="String">
+	DELETE FROM USER WHERE USER_NICK = #{user_nick}
+</delete>
+
+<!-- 내가 작성한 리뷰 -->
+<select id="myReview" parameterType="string" resultType="InteriorReviewDTO">
+	SELECT RE_NO, COM_NAME, USER_NICK, RE_TITLE, RE_CONTENT 
+		FROM REVIEW
+	 WHERE USER_NICK = #{user_nick}
+	 ORDER BY RE_NO DESC
+	 LIMIT 0,6
+</select>		
+
+<!-- 내가 작성한 리뷰 더보기 -->
+<select id="myReviewMore" parameterType="InteriorReviewDTO" resultType="InteriorReviewDTO">
+	SELECT RE_NO, COM_NAME, USER_NICK, RE_TITLE, RE_CONTENT 
+		FROM REVIEW
+	 WHERE USER_NICK = #{user_nick}
+	 ORDER BY RE_NO DESC
+	 LIMIT #{startPage},2
+</select>		
+
+
+<select id="myReviewCompany" parameterType="String" resultType="float">
+	SELECT COM_RATING 
+		FROM COMPANY 
+	WHERE COM_NAME = #{com_name}
+</select>
+
+
+
+<!--자유게시판 내가 쓴 글 -->
+<select id="myTradeBoardList" parameterType="Map" resultType="TradeBoardDTO">
+	SELECT BOARD_ID, USER_NICK, BOARD_TITLE, BOARD_CONTENT, BOARD_DATE, BOARD_COUNT, BOARD_PW, BOARD_PAGENUM  
+		FROM TRADE_BOARD 
+	  WHERE USER_NICK = #{user_nick}
+	  ORDER BY BOARD_ID DESC
+	  LIMIT #{startIndex}, 10
+</select>		
+
+<!-- 자유게시판 내가 쓴 글 총 갯수 -->
+<select id="myBoardCount" resultType="int">
+	SELECT COUNT(BOARD_ID) 
+		FROM TRADE_BOARD
+		WHERE USER_NICK = #{user_nick}
+</select>
+
+<!-- 진행중인 거래  -->
+<select id="myTradeList" parameterType="string" resultType="MyTradeDTO">
+SELECT DISTINCT
+		UT.TRADE_NO,
+		UT.TRADE_TITLE "TRADE_TITLE",
+		FORMAT(UT.TRADE_PRICE,0) "TRADE_PRICE", 
+		UT.TRADE_PHOTO "TRADE_PHOTO",
+		UT.TRADE_COMPLETE "TRADE_COMPLETE", 
+        UT.USER_NICK "USER_NICK"
+      FROM USEDTRADE UT , TRADE_CHAT TC
+ WHERE UT.TRADE_NO IN (SELECT TRADE_NO FROM TRADE_CHAT WHERE USER_NICK = #{user_nick} OR TO_NICK = #{user_nick})
+	AND UT.TRADE_NO = TC.TRADE_NO 
+	AND UT.TRADE_COMPLETE = 0;
+</select>
+
+<!-- 나의 판매상품 -->
+<select id="mySellList" parameterType="string" resultType="MyTradeDTO">
+	SELECT TRADE_NO,
+			TRADE_TITLE,
+			FORMAT(TRADE_PRICE,0) "TRADE_PRICE", 
+			TRADE_PHOTO,
+			TRADE_COMPLETE	
+		FROM USEDTRADE 
+	WHERE USER_NICK = #{user_nick}
+		  ORDER BY TRADE_NO DESC
+</select>
+
+<!-- 나의 판매상품 좋아요 수 -->
+<select id="sumInterest" parameterType="int" resultType="int">
+	SELECT  IFNULL(SUM(TRADE_INTEREST), 0) "SUMINTEREST"
+		 FROM TR_INTEREST 
+	WHERE TRADE_NO = #{trade_no}
+</select>
+
+
+
+<select id="myBuyList" parameterType="string" resultType="MyTradeDTO">
+	 SELECT TRADE_NO,
+			TRADE_TITLE ,
+			FORMAT(TRADE_PRICE,0) "TRADE_PRICE", 
+			TRADE_PHOTO,
+			TRADE_COMPLETE, 
+       		USER_NICK
+       FROM USEDTRADE
+     WHERE TRADE_BUYER = #{user_nick}
+</select>
+</mapper>

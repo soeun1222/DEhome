@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mappers.userMapper">
+	<!-- 닉네임 중복 체크 -->
+	<select id="nickCheck" parameterType="UserDTO" resultType="string">
+		select USER_NICK from USER where USER_NICK = #{user_nick}
+	</select>
+	
+	<!-- 아이디 중복 체크 -->
+	<select id="idCheck" parameterType="UserDTO" resultType="string">
+		select USER_ID from USER where USER_ID = #{user_id}
+	</select>
+	
+	<!-- 전화번호 중복 체크 -->
+	<select id="pnumCheck" parameterType="UserDTO" resultType="string">
+		select USER_PNUM from USER where USER_PNUM = #{user_pnum}
+	</select>
+	
+	<!-- 업체명 중복 체크 -->
+	<select id="comCheck" parameterType="UserDTO" resultType="string">
+		select COM_NAME from USER where COM_NAME = #{com_name}
+	</select>
+	
+	<!-- 회원가입 -->
+	<insert id="register">
+		insert into USER values(#{user_nick}
+						, #{user_id}
+						, #{user_pw}
+						, #{user_name}
+						, #{user_pnum}
+						, #{user_email}
+						, #{user_email2}
+						, #{user_sex}
+						, #{user_addr1}
+						, #{user_addr2}
+						, #{user_addr3}
+						, #{user_addr4}
+						, now()
+						, #{com_name}
+						, #{login_type})
+	</insert>
+	
+	<!-- 로그인 -->
+	<select id="login" parameterType="UserDTO" resultType="UserDTO">
+		select * from USER where USER_ID = #{user_id} and USER_PW = #{user_pw}
+	</select>
+	<!-- 카카오 로그인후 추가정보 등록 여부 확인 -->
+	<select id="kakaonickCheck" parameterType="UserDTO" resultType="string">
+		select USER_NICK from USER where USER_NICK = #{kakaonick}
+	</select>
+	<!-- 네이버 로그인후 추가정보 등록 여부 확인 -->
+	<select id="navernickCheck" parameterType="UserDTO" resultType="string">
+		select USER_NICK from USER where USER_NICK = #{navernick}
+	</select>
+	
+	<!-- 아이디 찾기 --> 
+	<select id="findID" resultType="UserDTO" parameterType="UserDTO">
+		select USER_ID, REG_DATE, LOGIN_TYPE 
+			from USER 
+			where USER_NAME = #{user_name} 
+			and USER_EMAIL = #{user_email} 
+			and USER_EMAIL2 = #{user_email2}
+			
+	</select>
+	
+	<!-- 비밀번호 찾기 --> 
+	<select id="findPW" parameterType="UserDTO" resultType="String">
+		select concat(left(USER_PW,2),repeat(replace(mid(USER_PW,3,length(USER_PW)-4),mid(USER_PW,3,length(USER_PW)-4),'*'), length(mid(USER_PW,3,length(USER_PW)-4))),right(USER_PW,2))
+			from USER 
+			where USER_ID = #{user_id} 
+			and USER_NAME = #{user_name} 
+			and USER_EMAIL = #{user_email} 
+			and USER_EMAIL2 = #{user_email2}
+	</select>
+	
+	<!-- 메인화면 중고거래 최신 리스트 5개 -->
+	<select id="mainPageList" resultType="UserDTO" parameterType="UserDTO" >
+		select t1.TRADE_NO as tr_no
+			, t1.USER_NICK as tr_user_nick
+			, t1.CATEGORY as tr_category
+			, t1.TRADE_TITLE as tr_title
+			, t1.TRADE_CONTENT as tr_content
+			, t1.TRADE_DATE as tr_date
+			, t1.TRADE_COUNT as tr_count
+			, t1.TRADE_EVALUE as tr_evalue
+			, format(t1.TRADE_PRICE,0) as tr_price
+			, t1.TRADE_PHOTO as tr_photo
+			, t1.TRADE_COMPLETE as tr_complete
+			, case when left(t2.USER_ADDR2,1) = '경' then substring_index(t2.USER_ADDR2,' ', 3) 
+					when left(t2.USER_ADDR2,1) = '전' then substring_index(t2.USER_ADDR2,' ', 3) 
+					when left(t2.USER_ADDR2,1) = '충' then substring_index(t2.USER_ADDR2,' ', 3) 
+					when left(t2.USER_ADDR2,1) = '강' then substring_index(t2.USER_ADDR2,' ', 3) 
+					else substring_index(t2.USER_ADDR2,' ', 2) 
+				end as USER_ADDR2
+			from USEDTRADE t1, USER t2 
+			where t1.USER_NICK = t2.USER_NICK and TRADE_COMPLETE = 0 order by TRADE_NO desc
+			limit 0, 5
+	</select>
+	
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

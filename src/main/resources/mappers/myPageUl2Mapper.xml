@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mappers.myPageUl2Mapper">
+	<!-- 내가 작성한 인테리어 팁 리스트 출력 -->
+	<select id="myTipList" resultType="MyPageUl2DTO" parameterType="MyPageUl2DTO">
+		SELECT
+			  TIP_NO as tip_no
+			, USER_NICK as tip_user_nick
+			, CATEGORY as tip_category
+			, TIP_TITLE as tip_title
+			, TIP_CONTENT as tip_content
+			, TIP_FILE as tip_file
+			, TIP_DATE as tip_date
+			, TIP_COUNT as tip_count
+			, TIP_BOOKMARK as tip_bookmark
+			, TIP_BMUSER as tip_bmuser 
+		FROM
+			INTERIOR_TIP 
+		WHERE
+			USER_NICK = #{tip_user_nick}
+	</select>
+	
+	<!-- 내가 북마크한 인테리어 팁 리스트 출력 -->
+	<select id="myBmTipList" resultType="MyPageUl2DTO" parameterType="MyPageUl2DTO">
+		SELECT
+			  TIP_NO as tip_no
+			, USER_NICK as tip_user_nick
+			, CATEGORY as tip_category
+			, TIP_TITLE as tip_title
+			, TIP_CONTENT as tip_content
+			, TIP_FILE as tip_file
+			, TIP_DATE as tip_date
+			, TIP_COUNT as tip_count
+			, TIP_BOOKMARK as tip_bookmark
+			, TIP_BMUSER as tip_bmuser  
+		FROM
+			INTERIOR_TIP 
+		WHERE
+			TIP_BMUSER LIKE #{tip_user_nick}
+	</select>
+	
+	<!-- 내가 등록한 중고거래 물품 (판매) -->
+	<select id="mySellList" resultType="MyPageUl2DTO" parameterType="MyPageUl2DTO">
+		SELECT
+			  TRADE_NO as tr_no
+			, TRADE_TITLE as tr_title
+			, FORMAT(TRADE_PRICE,0) as tr_price
+			, TRADE_PHOTO as tr_photo
+			, TRADE_COMPLETE as tr_complete
+		FROM
+			USEDTRADE 
+		WHERE
+			USER_NICK = #{tr_user_nick}
+		ORDER BY
+			TRADE_NO DESC
+	</select>
+	
+	<!-- 내가 구매한 중고거래 물품 -->
+	<select id="myBuyList" resultType="MyPageUl2DTO" parameterType="MyPageUl2DTO">
+		SELECT
+			  TRADE_NO as tr_no
+			, TRADE_TITLE as tr_title
+			, FORMAT(TRADE_PRICE,0) as tr_price
+			, TRADE_PHOTO as tr_photo
+			, TRADE_COMPLETE as tr_complete
+		FROM
+			USEDTRADE 
+		WHERE
+			TRADE_BUYER = #{tr_user_nick}
+		ORDER BY
+			TRADE_NO DESC
+	</select>
+	
+	<!-- 내가 등록한 중고거래 물품 좋아요 수 -->
+	<select id="likeCount" parameterType="int" resultType="int">
+		SELECT
+			IFNULL(SUM(TRADE_INTEREST), 0) as 'like'
+		FROM
+			TR_INTEREST
+		WHERE
+			TRADE_NO = #{tr_no}
+	</select>
+	
+	<!-- 내가 작성한 QNA -->
+	<select id="myQnaList" resultType="MyPageUl2DTO" parameterType="MyPageUl2DTO">
+		SELECT
+			  QNA_NO as qna_no
+			, USER_NICK as qna_user_nick
+			, QNA_TITLE as qna_title
+			, QNA_CONTENT as qna_content
+			, QNA_DATE as qna_date
+			, QNA_COUNT as qna_count
+			, QNA_TYPE as qna_type
+			, QNA_PW as qna_pw
+			, QNA_PROCESS as qna_process
+		FROM
+			QNA 
+		WHERE
+			USER_NICK = #{qna_user_nick}
+		ORDER BY
+			QNA_NO DESC
+	</select>
+</mapper>

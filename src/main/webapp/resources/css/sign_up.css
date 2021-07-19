@@ -1,0 +1,304 @@
+.contents_sign_up {
+    width: 1104px;
+    /*--0607_SE--*/
+    /* height: 700px; */
+    margin: 0 auto;
+    padding-top: 10px;
+    
+}
+/* 회원가입 버튼*/
+.sign_up_box_title {
+    /*--0607_SE--*/
+    /* margin-bottom: 50px; */
+    margin-bottom: 30px;
+    text-align: left;
+    font: normal normal 30px 'Do Hyeon', sans-serif;
+    color: #333;
+}
+.sign_up_box{
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+    width: 500px;
+    /*--0607_SE--*/
+    /* height: 550px; */
+    /* height: 1100px; */
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-bottom: 50px;
+    /*--0607_SE--*/
+    /* float: left; */
+    border-right: 1px solid lightgray;
+
+}
+.sns_sign_up_box{
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;;
+    width: 500px;
+    /*--0607_SE--*/
+    /* height: 550px; */
+    height: 250px;
+    margin: auto auto;
+    padding-top: 50px;
+    padding-left: 50px;
+    /*--0607_SE--*/
+    /* float: left; */
+    margin-bottom: 50px;
+}
+/* 회원가입창 라벨 */
+.sign_up_label {
+    padding-top: 10px;
+    font: normal bold 15px 'Nanum Gothic', sans-serif ;
+    color: gray;
+}
+/* 회원가입 정보입력란 */
+.sign_up_input {
+    /*--0607_SE--*/
+    /* width: 400px; */
+    width: 430px;
+    height: 38px;
+    margin-top: 5px;
+}
+
+/* 회원가입버튼 */
+.sign_up_button {
+    margin-top: 10px;
+    background-color: #333;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 15px 207px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font: normal bold 16px 'Nanum Gothic', sans-serif ;
+    cursor: pointer;
+}
+
+.sign_up_button_add {
+	margin-top: 10px;
+    background-color: #333;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 15px 173px;
+    text-align: center;
+    text-decoration: none;
+    font: normal bold 16px 'Nanum Gothic', sans-serif ;
+    cursor: pointer;
+}
+
+.sign_up_button_naver {
+    margin-top: 10px;
+    background-color: #2DB400;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 15px 140px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font: normal bold 16px 'Nanum Gothic', sans-serif ;
+    cursor: pointer;
+}
+.sign_up_button_kakao {
+    margin-top: 10px;
+    background-color: #ffe812;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 15px 140px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font: normal bold 16px 'Nanum Gothic', sans-serif ;
+    cursor: pointer;
+}
+/* 회원가입 버튼: hover */
+.sign_up_button:hover{
+    background-color: #494343;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+.sign_up_button_naver:hover{
+    background-color: #147a4e;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}   
+.sign_up_button_kakao:hover{
+    background-color: #FFE88C;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+/*--0607_SE추가--*/
+
+.sign_up_input2:first-child {
+    float: left;
+    width: 187px;
+    height: 38px;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.sign_up_input2:nth-child(2) {
+    width: 110px;
+    height: 38px;
+}
+
+.reg_addr {
+    width: 438px;
+    margin-top: 5px;
+}
+
+.reg_addr .addr1 {
+    width: 316px;
+    height: 30px;
+}
+
+.reg_addr .addr_btn {
+    width: 100px;
+    height: 36px;
+    vertical-align: -1px;
+    text-align: center;
+}
+
+.reg_addr .addr_btn:hover {
+    cursor: pointer;
+}
+
+.reg_addr .addr2 {
+    width: 436px;
+    height: 30px;
+    margin-top: 5px;
+}
+
+.reg_addr .addr3 {
+    width: 436px;
+    height: 30px;
+    margin-top: 5px;
+}
+
+.reg_addr .addr4 {
+    width: 436px;
+    height: 30px;
+    margin-top: 5px;
+}
+
+.sign_up_input3 {
+    float: left;
+    width: 325px;
+    height: 30px;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.sign_up_box button {
+    width: 100px;
+    height: 36px;
+    vertical-align: -15px;
+}
+
+.sign_up_box button:hover {
+    cursor: pointer;
+}
+
+
+/*--0616_기업유무 추가--*/
+
+
+#com_chk_span {
+	font: normal bold 15px 'Nanum Gothic', sans-serif ;
+	color : #ccc;
+	font-size: 15px;
+	vertical-align: 1px;
+}
+
+
+/*--0617_비밀번호 검사 추가--*/
+.pwdValTxt {
+	font-size: 12px;
+}
+
+/*--0622_이메일 인증번호 체크 추가 --*/
+.mail_check_wrap {
+	display: flex;
+	margin-top: 10px;
+}
+
+.mail_check_input_box {
+	display:flex;
+	justify-content: space-between;
+	width: 325px;
+	height: 35px;
+	border: 1px solid lightgray;
+}
+.mail_check_input {
+	width: 335px;
+	height: 33px;
+	border: none;
+	padding-left: 10px;
+}
+.time {
+	width: 100px;
+	text-align:center;
+	border: none;
+	padding: 10px;
+	color: #1b7850;
+	font-weight: bold;
+}
+.mail_check_input:active, .time:active {
+	outline: none;
+}
+.mail_check_input:focus, .time:focus {
+	outline: none;
+}
+.mail_check_btn_box {
+	margin-left: 13px;
+}
+.mail_check_btn {
+	cursor:pointer;
+	width: 107px;
+	height: 36px;
+}
+#mail_check_input_box_warn {
+	display: block;
+	margin-top: 5px;
+}
+#back_color {
+	background-color: #F4F4F4;
+}
+#back_color_reverse {
+	background-color: white;
+}
+.correct{
+    color : green;
+}
+.incorrect{
+    color : red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

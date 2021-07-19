@@ -1,0 +1,609 @@
+/*-메인컬러 : #1b7850;-*/
+/*-포인트컬러 : #ffe88c;-*/
+
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Nanum+Gothic&display=swap');
+
+.font_green {
+    color: #1b7850;
+}
+
+.font_dohyeon {
+    font-family: 'Do Hyeon', sans-serif; 
+}
+
+.font_bold {
+    font-weight: bold;
+}
+
+.font_bolder {
+    font-weight: bolder;
+}
+
+/*--인테리어 업체 리스트 페이지--*/
+
+#chatting_list {
+    width: 1080px;
+    margin: 60px auto;
+
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+
+#chatting_list #chatting_title {
+    width: 1060px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+
+
+#chatting_list #chatting_title p {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: -2px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#chatting_list #chatting_title p span {
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 60px;
+    letter-spacing: -2px;
+    margin-right: 5px;
+    font-weight: normal;
+}
+
+
+#chatting_list #sub_title {
+    width: 1010px;
+    margin: 0 auto;
+    padding: 10px 30px;
+    margin-bottom: 50px;
+    background-color: #fdf3cb;
+    border-radius: 20px;
+}
+
+#chatting_list #sub_title span:first-child {
+    color: #1b7850;
+    font-weight: bold;
+    font-size: 17px;
+    letter-spacing: -1px;
+    height: 27px;
+    line-height: 24px;
+}
+
+#chatting_list #sub_title span:last-child {
+    float: right;
+    color: #444;
+    font-size: 14px;
+    height: 27px;
+    line-height: 24px;
+}
+
+#chatting_box {
+    width: 500px;
+    height: 180px;
+    border: 1px solid #ccc;
+    border-top-left-radius: 30px;
+    border-end-start-radius: 30px;
+    border-end-end-radius: 30px;
+    margin-left: 20px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+	cursor: pointer;
+    display: inline-block;
+}
+
+
+#chatting_box .img_box img {
+    width: 160px;
+    height: 150px;
+    border-radius: 15px;
+
+    margin-top: 15px;
+    margin-left: 15px;
+
+    float: left;
+    object-fit: cover;
+}
+
+#chatting_box .text_box {
+    width: 280px;
+    float: left;
+    margin-top: 32px;
+    margin-left: 20px;
+
+    overflow: hidden;
+}
+
+#chatting_box .text_box p:first-child {
+    width: 250px;
+    height: 20px;
+    font-size: 19px;
+    letter-spacing: -1px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: 6px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#chatting_box .text_box .price {
+	color:#1b7850;
+	font-size: 20px;
+	font-weight: bold;
+	margin-left: 5px;
+}
+#chatting_box .text_box .title {
+	color:#333;
+	font-size: 25px;
+	font-weight: bold;
+	display: block;
+	margin-left: 3px;
+	margin-bottom: 15px;
+}
+
+
+#chatting_box .text_box button {
+    width: 280px;
+    height: 30px;
+
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 13px;
+
+    color: #333;
+    background-color: #ffe88c;
+}
+
+#chatting_box .text_box button:hover {
+    cursor: pointer;
+    background-color: #1b7850;
+    border: 1px solid #1b7850;
+    color: white;
+
+    transition-duration: 0.3s;
+}
+
+
+#chatting_box .text_box button.over {
+    width: 280px;
+    height: 30px;
+
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 13px;
+
+    color: #777;
+    font-weight: bold;
+    background-color: #ccc;
+}
+
+#chatting_box .text_box button.over:hover {
+    cursor: pointer;
+    background-color: #333;
+    border: 1px solid #333;
+    color: white;
+
+    transition-duration: 0.1s;
+}
+
+
+
+
+#chatting_list #sub_title2 {
+    width: 1010px;
+    margin: 0 auto;
+    padding: 10px 30px;
+    margin-bottom: 50px;
+    background-color: #1b7850;
+    border-radius: 20px;
+}
+
+#chatting_list #sub_title2 span:first-child {
+    color: white;
+    font-size: 17px;
+    letter-spacing: -1px;
+    height: 27px;
+    line-height: 24px;
+}
+
+#chatting_list #sub_title2 span:last-child {
+    float: right;
+    color: white;
+    font-size: 14px;
+    height: 27px;
+    line-height: 24px;
+}
+
+
+#chatting_box2 {
+    width: 500px;
+    height: 180px;
+    border: 1px solid #ccc;
+    border-top-right-radius: 30px;
+    border-end-start-radius: 30px;
+    border-end-end-radius: 30px;
+    margin-left: 20px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+
+    display: inline-block;
+}
+
+
+#chatting_box2 .img_box img {
+    width: 160px;
+    height: 150px;
+    border-radius: 15px;
+
+    margin-top: 15px;
+    margin-left: 15px;
+
+    float: left;
+    object-fit: cover;
+}
+
+#chatting_box2 .text_box {
+    width: 280px;
+    float: left;
+    margin-top: 32px;
+    margin-left: 20px;
+
+    overflow: hidden;
+}
+
+#chatting_box2 .text_box p:first-child {
+    width: 250px;
+    height: 20px;
+    font-size: 19px;
+    letter-spacing: -1px;
+    font-weight: bold;
+    margin-bottom: 10px;
+
+    margin-left: 6px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#chatting_box2 .text_box span {
+    font-size: 14px;
+    color: #666;
+	margin-bottom: 10px;
+    margin-left: 6px;
+}
+
+#chatting_box2 .text_box p:nth-child(4) {
+    font-size: 20px;
+    color: #1b7850;
+    font-weight: bolder;
+    padding: 10px 0px;
+
+    margin-left: 6px;
+}
+
+#chatting_box2 .text_box button {
+    width: 280px;
+    height: 30px;
+
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 13px;
+
+    color: #333;
+    background-color: #ffe88c;
+}
+
+#chatting_box2 .text_box button:hover {
+    cursor: pointer;
+    background-color: #1b7850;
+    border: 1px solid #1b7850;
+    color: white;
+
+    transition-duration: 0.3s;
+}
+
+
+#chatting_box2 .text_box button.over {
+    width: 280px;
+    height: 30px;
+
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 13px;
+
+    color: #777;
+    font-weight: bold;
+    background-color: #ccc;
+}
+
+#chatting_box2 .text_box button.over:hover {
+    cursor: pointer;
+    background-color: #333;
+    border: 1px solid #333;
+    color: white;
+
+    transition-duration: 0.1s;
+}
+
+
+
+/*-----------채팅화면---------------*/
+
+
+#chatting {
+    width: 942px;
+    margin: 60px auto;
+
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+
+#chatting #chatting_title {
+    width: 900px;
+    height: 50px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#chatting #chatting_title p:first-child {
+    font-family: 'Do Hyeon', sans-serif;
+    color: #1b7850;
+    font-size: 60px;
+    letter-spacing: -2px;
+    font-weight: normal;
+    float: left;
+}
+
+#chatting #chatting_title p:last-child {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    margin-top: 30px;
+    color: #333;
+
+    float: left;
+}
+
+#chatting #chat_box {
+    width: 900px;
+    height: 1000px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    padding: 20px;
+    display: inline-block;
+}
+
+
+
+#chatting #chat_box #chat_top {
+    width: 900px;
+    height: 100px;
+
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+#chatting #chat_box #chat_top .chat_img {
+    width: 100px;
+    height: 100px;
+    
+    margin-left: 10px;
+
+    float: left;
+}
+
+#chatting #chat_box #chat_top .chat_img img {
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+#chat_box #chat_top .chat_txt {
+    width: 750px;
+    margin: 10px 20px;
+
+    float: left;
+}
+
+#chatting #chat_box .go {
+    width: 200px;
+    text-align: right;
+    font-size: 15px;
+    font-weight: bold;
+    color: #666;
+    float: right;
+}
+
+#chatting #chat_box .go a span {
+    color: #1b7850;
+}
+
+#chat_box #chat_top .chat_txt p:first-child {
+    color: #333;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: -1px;
+
+    margin-bottom: 10px;
+}
+
+
+
+#chat_box #chat_top .chat_txt span {
+    margin-bottom: 10px;
+    font-size: 15px;
+    letter-spacing: -1px;
+    color: #666;
+}
+
+#chat_box #chat_top .chat_txt p:last-child {
+    font-size: 23px;
+    color: #1b7850;
+    font-weight: bolder;
+    padding: 10px 0px;
+}
+
+
+/*-----------채팅시작---------------*/
+
+#chatting_part {
+    width: 870px;
+    height: 800px;
+    margin: 40px auto;
+	overflow-y:scroll;
+	overflow-x:hidden;
+    background-image: url(../images/logo_bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#chatting_part::-webkit-scrollbar {
+	width: 10px;
+}
+#chatting_part::-webkit-scrollbar-thumb {
+	border-radius: 5px;
+    background-color: #1b7850;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+}
+#chatting_part::-webkit-scrollbar-track {
+	background-color: #00ff0000;	/*투명*/
+}
+#chatting_part #chat {
+    width: 870px;
+    display: inline-block;
+    margin-top: 10px;
+    position: relative;
+}
+
+#chatting_part #chat span {
+    position: absolute;
+    bottom: 2px;
+    margin-left: 5px;
+
+    font-weight: bold;
+    color: #1b7850;
+}
+
+#chatting_part .my_chat {
+    border: 1px solid #888;
+    color: #333;
+    padding: 20px 30px;
+    float: right;
+	margin-right: 20px;
+	line-height: 130%;
+    border-top-left-radius: 30px;
+    border-end-start-radius: 30px;
+    border-end-end-radius: 30px;
+    background-color: #fdf3cb;
+}
+
+#chatting_part .other_chat {
+    border: 1px solid #1b7850;
+    color: #333;
+    padding: 20px;
+    float: left;
+	line-height: 130%;
+    border-top-right-radius: 30px;
+    border-end-start-radius: 30px;
+    border-end-end-radius: 30px;
+
+    background-color: #c2dfd3;
+}
+
+/*-----------채팅치는부분-------------*/
+
+#chatbox {
+    width: 800px;
+    height: 80px;
+	resize: none;
+    padding: 20px;
+    margin-bottom: 50px;
+
+    border: none;
+
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+
+    border-end-start-radius: 30px;
+
+    float: left;
+}
+
+#chatbox:focus {
+    outline: none;
+}
+
+.submitBtn {
+    float: left;
+
+    width: 100px;
+    height: 121px;
+
+    border: none;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-end-end-radius: 30px;
+}
+
+.submitBtn:hover {
+    cursor: pointer;
+
+    background-color: #ffe88c;
+
+    transition-duration: 0.3s;
+}
+
+
+/*-----------0704_SE수정(coun_chattingList)-------------*/
+
+
+
+
+.text_box .com_name {
+	font-size: 25px;
+	font-weight: bold;
+	color: #1b7850;
+}
+
+.text_box .com_addr {
+	font-size: 15px;
+	letter-spacing: -1px;
+	color: #333;
+	
+	margin: 10px 0px;
+}
+
+
+.text_box .com_rating {
+	font-size: 20px;
+	font-weight: bold;
+	color: #1b7850;
+	
+	vertical-align: 2px;
+}
+
+
+#chatting_box .text_box p:first-child.other {
+	font-size: 15px;
+	font-weight: bold;
+	color: #666;
+	float: right;
+	width: 130px;
+	text-align: right;
+	
+}
+
+.trade_btn {
+	display: block;
+	margin-top: 10px;
+}

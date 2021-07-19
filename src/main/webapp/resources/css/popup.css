@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Nanum+Gothic&display=swap');
+
+body {
+ width: 350px;
+ height: 300px;
+ margin: 80px auto;
+ vertical-align: middle;
+
+ border: 1px solid lightgray;
+ border-radius: 20px;
+}
+
+p {
+    text-align: center;
+    font: normal normal 40px 'Do Hyeon', sans-serif;
+    color: #1b7850;
+}
+
+form {
+    width: 350px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+
+form .id_input{
+    width: 300px;
+    height: 30px;
+
+    display: block;
+    margin: 0 auto;
+
+    margin-bottom: 6px;
+    border-radius: 5px;
+    border: 1px solid #888;
+}
+
+form .btn{
+    width: 306px;
+    height: 30px;
+
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+    border: 1px solid #888;
+}
+
+form .btn:hover {
+    cursor: pointer;
+    background-color: #1b7850;
+    color: white;
+
+    transition-duration: 0.3s;
+}
+
+form .use {
+    width: 306px;
+    height: 30px;
+
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+    border: 1px solid #888;
+
+    margin-top: 5px;
+    background-color: #ffe88c;
+    color: #444;
+    font-weight: bold;
+}
+
+form .use:hover {
+    cursor: pointer;
+    background-color: #1b7850;
+    color: white;
+
+    transition-duration: 0.3s;
+}
+
+
+

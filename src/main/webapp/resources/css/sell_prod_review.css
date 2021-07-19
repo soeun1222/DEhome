@@ -1,0 +1,93 @@
+.contents_box_review {
+    width: 1010px;
+    height: 600px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /* margin-left: 30px; */
+    padding-bottom: 20px;
+    /* padding-left: 25px; */
+    float: left;
+}
+/* 문의 테이블 공간 */
+.ask_table_box {
+    border-bottom: 1px solid lightgray;
+    width: 1010px;
+    height: 30px;
+    margin-top: 20px;
+    /* margin-bottom: 20px; */
+    margin-left: 30px;
+    padding-bottom: 20px;
+    padding-left: 25px;
+    /* float: left; */
+}
+/* 문의하기 버튼 */
+.ask_button {
+    background-color: #333;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font: normal bold 16px 'Nanum Gothic', sans-serif ;
+
+}
+.ask_button:hover {
+    background-color: #969090;
+    transition-duration: 0.3s;
+}
+/* 조회 기간설정 */
+.search_date {
+    padding: 5px 15px;
+    font: normal bold 14px 'Nanum Gothic', sans-serif ;
+    
+}
+/* 조회버튼 */
+.refer_button {
+    /* margin-top: 10px; */
+    /* margin-left: 10px; */
+    background-color: white;
+    border: 1px solid #333;
+    /* border-radius: 4px; */
+    color: #333;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font: normal bold 16px 'Nanum Gothic', sans-serif ;
+    
+}
+.refer_button:hover{
+    background-color: #e9e3e3;
+    transition-duration: 0.3s;
+}
+/* 문의 테이블 제목부분 */
+.ask_table_header {
+    background-color: rgb(245, 245, 244);
+    border-bottom: 3px solid lightgray;
+    width: 1033px;
+    margin-left: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    font: normal bold 15px 'Nanum Gothic', sans-serif;
+    color: #333;
+    float: left;
+}
+/* 문의 테이블 내용부분 */
+.ask_table_content {
+    /* border-top: 1px solid lightgray; */
+    border-bottom: 1px solid lightgray;
+    width: 1033px;
+    height: 100px;
+    margin-left: 30px;
+    padding-top: 70px;
+    padding-bottom: 5px;
+    text-align: center;
+    font: normal normal 15px 'Nanum Gothic', sans-serif;
+    color: #333;
+    float: left;
+}
+
+

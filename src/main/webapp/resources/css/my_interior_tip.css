@@ -1,0 +1,162 @@
+/*-메인컬러 : #1b7850;-*/
+/*-포인트컬러 : #ffe88c;-*/
+
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Nanum+Gothic&display=swap');
+
+.font_green {
+    color: #1b7850;
+}
+
+/*-- 내가 작성한 인테리어 팁 리스트 페이지--*/
+
+#my_interior_tip_list {
+    width: 1050px;
+    height: auto;
+    float: left;
+    margin: 0 auto;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+#my_interior_tip_list .my_tip_content {
+    height: 320px;
+    margin-bottom: 50px;
+}
+
+#my_interior_tip_list .my_tip_content .my_tip_title {
+    margin-bottom: 20px;
+}
+
+#my_interior_tip_list .my_tip_content .my_tip_title p {
+    font-size: 30px;
+    letter-spacing: -1px;
+    color: #333;
+}
+
+#my_interior_tip_list .my_tip_content .my_tip_title p:nth-child(2) {
+    font-family: 'Do Hyeon', sans-serif;
+    letter-spacing: -2px;
+    font-size: 40px;
+    margin-bottom: 8px;
+}
+
+
+
+#my_interior_tip_list .my_tip_content .my_tipcon_box {
+    width: 254px;
+    border-radius: 10px;
+
+    float: left;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#my_interior_tip_list .my_tip_content a .my_tipcon_box:first-child {
+    margin-right: 16px;
+}
+
+#my_interior_tip_list .my_tip_content a .my_tipcon_box:nth-child(2) {
+    margin-right: 16px;
+}
+
+#my_interior_tip_list .my_tip_content a .my_tipcon_box .my_tipcon_img {
+    width: 254px;
+    height: 160px;
+    overflow: hidden;
+}
+
+#my_interior_tip_list .my_tip_content a .my_tipcon_box img {
+    width: 254px;
+    height: 156px;
+    border-bottom: 4px solid #ffe88c;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    object-fit: cover;
+}
+
+#my_interior_tip_list .my_tip_content a .my_tipcon_box:hover img {
+    transform: scale(1.2);
+    transition-duration: 0.5s;
+}
+
+#my_interior_tip_list .my_tip_content a .my_tipcon_box:hover {
+    background-color: #ececec;
+    transition-duration: 0.5s;
+}
+
+
+#my_interior_tip_list .my_tip_content a .my_tipcon_box input {
+    width: 33px;
+    height: 35px;
+
+    position: absolute;
+    right: 10px;
+    top: 110px;
+
+    background: url('../images/bookmark_off_g.png');
+    border: none;
+}
+
+#my_interior_tip_list .my_tip_content a .my_tipcon_box input:hover {
+    cursor: pointer;
+    background: url('../images/bookmark_hover.png');
+    transition-duration: 0.5s;
+}
+
+#my_interior_tip_list .my_tip_content a .my_tipcon_box .bm_on {
+	width: 33px;
+    height: 35px;
+
+    position: absolute;
+    right: 10px;
+    top: 110px;
+
+    background: url('../images/bookmark_on.png');
+    border: none;
+}
+
+#my_interior_tip_list .my_tip_content a .my_tipcon_box .bm_on:hover {
+	cursor: pointer;
+    background: url('../images/bookmark_hover_g.png');
+    transition-duration: 0.5s;
+}
+
+#my_interior_tip_list .my_tip_content a .my_tipcon_box p {
+    width: 254px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    letter-spacing: -1px;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    padding: 5px;
+    padding-top: 10px;
+}
+
+
+#my_interior_tip_list .my_tip_content a .my_tipcon_box p:last-child {
+    font-size: 13px;
+    font-weight: normal;
+    letter-spacing: -0.5px;
+
+    padding-top: 5px;
+    padding-bottom: 15px;
+}
+
+#my_interior_tip_list .my_tip_content .my_tip_title {
+    margin-right: 10px;
+    margin-top: 32px;
+    background-color: white;
+    padding: 5px 40px;
+
+    color: #333;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+

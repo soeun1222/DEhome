@@ -1,0 +1,268 @@
+input[type="text"]:disabled {
+    background: white; 
+}
+
+.sell_form {
+    border: 1px solid #c0c0c0;
+    width: 600px;
+    height: 850px;
+    margin: 40px auto;
+}
+.regi_form_main_title {
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color:#1B7850;
+    margin-left: 225px;
+    margin-top: 30px;
+}
+
+.com_list {
+	width: 150px;
+	height: 30px;
+	border-top: 1px solid #c0c0c0;
+	border-left: 1px solid #c0c0c0;
+	border-right: 1px solid #c0c0c0;
+	border_bottom: none;
+	font-size: 14px;
+}
+
+.com_list:active, .com_list:focus {
+	outline: none;
+}
+.com_regi_form {
+    display: flex;
+    border-bottom: 1px solid #c0c0c0;
+    width: 500px;
+    margin: 0 auto  ;
+    align-items: flex-end;
+}
+.com_regi_form input {
+    border: none;
+    width: 500px;
+    height: 30px;
+    display: block;
+    margin: 50px auto 0 auto;
+    font-size: 18px;
+    color: #333;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: bold;
+}
+.com_regi_form input:focus {
+    outline: none;
+}
+.com_regi_form input::placeholder {
+    font-weight: 100;
+    font-size: 16px;
+    color: #888;
+}
+
+.com_regi_form_file {
+    border: none;
+    border-bottom: 1px solid #c0c0c0;
+    width: 500px;
+    height: 30px;
+    display: block;
+    margin: 50px auto 0 auto;
+    font-size: 20px;
+}
+.com_regi_form_file input[type="file"] { 
+    /* 파일 필드 숨기기 */
+    display: none;
+}
+
+.com_regi_form_file label {
+    color: #1B7850;
+    font-weight: bold;
+}
+.com_regi_form_file label:hover {
+    cursor: pointer;
+}
+#fileName {
+    border: none;
+    font-size: 17px;
+    margin-left: 20px;
+}
+#fileName:focus {
+    outline: none;
+}
+.address_reg {
+	font-family: 'Nanum Gothic', sans-serif;
+	width:500px;
+	margin: 50px auto 10px auto;
+	color: #1B7850;
+	font-size: 20px;
+	font-weight: bold;
+}
+.reg_addr {
+    width: 500px;
+    margin: 5px auto 0 auto;
+}
+
+.reg_addr .addr1 {
+    width: 380px;
+    height: 30px;
+}
+
+.reg_addr .addr_btn {
+    width: 100px;
+    height: 36px;
+    vertical-align: -1px;
+    text-align: center;
+}
+
+.reg_addr .addr_btn:hover {
+    cursor: pointer;
+}
+
+.reg_addr .addr2 {
+    width: 490px;
+    height: 30px;
+    margin-top: 5px;
+}
+
+.reg_addr .addr3 {
+    width: 490px;
+    height: 30px;
+    margin-top: 5px;
+}
+
+.reg_addr .addr4 {
+    width: 490px;
+    height: 30px;
+    margin-top: 5px;
+}
+
+.com_regi_form_content {
+    display: block;
+    margin: 30px auto 0 auto;
+    font-size: 20px;
+    border: 1px solid #c0c0c0;
+    resize: none;
+}
+.com_regi_form_content:focus {
+    outline: none;
+}
+.com_regi_form_content::placeholder {
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 16px;
+}
+.com_submit_btn {
+    width:500px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: flex-end;
+}
+.com_submit_btn input {
+    width: 80px;
+    height: 32px;
+    font-size: 15px;
+    background-color: #1B7850;
+    border: 1px solid #1B7850;
+    border-radius: 5px;
+    color: white;
+    font-family: 'Nanum Gothic', sans-serif;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+
+
+
+
+/*--0625_SE--*/
+
+select {
+	display: block;
+	width: 500px;
+	height: 38px;
+	margin: 30px auto;
+	margin-top: 40px;
+	padding: 3px 10px;
+	
+	border-bottom: 3px solid #1B7850;
+	border-top: 2px solid #ffe88c;
+	border-left: 2px solid #ffe88c;
+	border-right: 2px solid #ffe88c;
+	
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+select:focus {
+	outline: none;
+}
+
+.com_regi_form {
+	height: 30px;
+	margin-bottom: 20px;
+}
+
+
+/*--0629_SE--*/
+
+.sell_form {
+	height: auto;
+	padding-bottom: 20px;
+}
+
+.sell_form #imgShow {
+	width: 500px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
+.sell_form #imgShow img {
+	width: 500px;
+	object-fit: cover;
+}
+
+.sell_form .addrNow {
+	width: 500px;
+	height: 50px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
+.sell_form .addrNow p {
+	width: 370px;
+	float: left;
+	letter-spacing: -0.5px;
+	padding: 10px;
+	
+	border: 1px solid #ccc;
+	border-radius: 10px;
+}
+
+.sell_form .addrNow button {
+	float: right;
+	width: 100px;
+	height: 38px;
+	
+	border: none;
+	border-radius: 10px;
+	background-color: #1B7850;
+	
+	color: white;
+	font-weight: bold;
+}
+
+.sell_form .addrNow button:hover {
+	cursor: pointer;
+	background-color: #ffe88c;
+	color: #333;
+	transition-duration: 0.3s;
+}
+
+.bold {
+	font-weight: bolder;
+	color: #1B7850;
+}
+
+
+
+
+
+
+
+

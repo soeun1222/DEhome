@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Nanum+Gothic&display=swap');
+
+.font_green {
+    color: #1b7850;
+}
+
+#main_banner {
+    width: 100%;
+    height: 500px;
+    margin: 0 auto;
+    margin-top: 3px;
+
+    background-color: #f0f0f0;
+
+    font-family: "Nanum Gothic", sans-serif;
+}
+
+#main_banner .banner {
+    width: 1250px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+#tip_banner {
+    width: 100%;
+    height: 500px;
+    margin: 0 auto;
+    margin-top: 3px;
+
+    background-color: rgb(127, 172, 113);
+}
+
+#tip_banner .tip_banner {
+    width: 1250px;
+    height: 500px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#tip_banner .tip_banner .tip_txt {
+    position: absolute;
+    top: 100px;
+    right: 100px;
+
+    text-align: right;
+}
+
+#tip_banner .tip_banner .tip_txt p:first-child {
+    font-size: 40px;
+    letter-spacing: -4px;
+    line-height: 60px;
+    color: rgb(62, 104, 49);
+    font-weight: 600;
+}
+
+#tip_banner .tip_banner .tip_txt p:first-child span {
+    font-size: 55px;
+    letter-spacing: -1px;
+    color: white;
+    font-weight: bold;
+}
+
+#tip_banner .tip_banner .tip_txt p:nth-child(2) {
+    font-size: 18px;
+    color: rgb(236, 255, 231);
+    line-height: 28px;
+    letter-spacing: -1px;
+
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+#tip_banner .tip_banner .tip_txt .moreBtn {
+    margin-top: 90px;
+    margin-right: 12px;
+}
+
+
+#tip_banner .tip_banner .tip_txt .moreBtn button {
+    width: 100px;
+    height: 30px;
+
+    border: 1px solid white;
+    border-radius: 20px;
+
+    font-size: 15px;
+    line-height: 10px;
+    color: white;
+
+    background-color: rgb(127, 172, 113);
+}
+
+#tip_banner .tip_banner .tip_txt .moreBtn button:hover {
+    cursor: pointer;
+    border: 2px solid white;
+}
+
+
+#trade_con {
+    width: 100%;
+    height: 560px;
+    margin: 0 auto;
+
+}
+
+#trade_con #content {
+    width: 1260px;
+    margin: 0 auto;
+
+    padding-left: 20px;
+}
+
+#trade_con #content a {
+    display: inline-block;
+    width: 220px;
+    height: 300px;
+
+    margin-top: 70px;
+    margin-right: 23px;
+}
+
+#trade_con #content a:hover {
+    background-color: #eee;
+    border-radius: 20px;
+    transition-duration: 0.5s;
+}
+
+#trade_con #content .tr_title {
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#trade_con #content .tr_title p {
+    font-size: 53px;
+    color: #333;
+    font-family: 'Do Hyeon', sans-serif;
+    letter-spacing: -0.5px; 
+
+    margin-left: -30px;
+    padding-top: 60px;
+}
+
+#trade_con #content .trade_box {
+    width: 220px;
+    height: 300px;
+
+    border-radius: 20px;
+}
+
+#trade_con #content .trade_box .tr_img {
+    width: 220px;
+    height: 200px;
+
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    overflow: hidden;
+}
+#trade_con #content .trade_box .tr_img img {
+    width: 220px;
+    height: 200px;
+    object-fit: cover;
+}
+
+#trade_con #content .trade_box .tr_txt {
+    width: 200px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+#trade_con #content .trade_box .tr_txt p {
+    width: 200px;
+    padding-bottom: 8px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    color: #333;
+}
+
+#trade_con #content .trade_box .tr_txt p:first-child {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#trade_con #content .trade_box .tr_txt p:nth-child(2) {
+    font-size: 13px;
+    letter-spacing: -0.5px;
+    color: #666;
+}
+
+#trade_con #content .trade_box .tr_txt p:last-child {
+    font-size: 20px;
+    font-weight: bolder;
+    color: #1B7850;
+}

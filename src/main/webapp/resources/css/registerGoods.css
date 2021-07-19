@@ -1,0 +1,139 @@
+input[type="text"]:disabled {
+    background: white; 
+}
+
+.sell_form {
+    border: 1px solid #c0c0c0;
+    width: 600px;
+    height: auto;
+    margin: 40px auto;
+}
+.regi_form_main_title {
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color:#1B7850;
+    margin-left: 225px;
+    margin-top: 30px;
+}
+.goods_regi_form {
+    display: flex;
+    border-bottom: 1px solid #c0c0c0;
+    width: 500px;
+    margin: 0 auto  ;
+    align-items: flex-end;
+}
+.goods_regi_form input {
+    border: none;
+    width: 500px;
+    height: 30px;
+    display: block;
+    margin: 50px auto 0 auto;
+    font-size: 18px;
+    color: #333;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: bold;
+}
+.goods_regi_form input:focus {
+    outline: none;
+}
+.goods_regi_form input::placeholder {
+    font-weight: 100;
+    font-size: 16px;
+    color: #888;
+}
+
+#goods_category {
+    width: 170px;
+    height: 30px;
+    display: block;
+    margin-left: 48px;
+    margin-top: 60px;
+    font-size: 16px;
+    border: 1px solid #1B7850;
+}
+#goods_category:focus {
+    outline: #1B7850;
+}
+.regi_form_price input{
+    padding-left: 10px;
+}
+#price_category {
+    width:125px;
+    height: 30px;
+    border: 1px solid #1B7850;
+    font-size: 14px;
+}
+#price_category:focus {
+    outline: none;
+}
+
+.goods_regi_form_file {
+    border: none;
+    border-bottom: 1px solid #c0c0c0;
+    width: 500px;
+    height: 30px;
+    display: block;
+    margin: 50px auto 0 auto;
+    font-size: 20px;
+}
+.goods_regi_form_file input[type="file"] { 
+    /* 파일 필드 숨기기 */
+    display: none;
+}
+
+.goods_regi_form_file label {
+    color: #1B7850;
+    font-weight: bold;
+}
+.goods_regi_form_file label:hover {
+    cursor: pointer;
+}
+#fileName {
+    border: none;
+    font-size: 17px;
+    margin-left: 20px;
+}
+#fileName:focus {
+    outline: none;
+}
+.select_img_edit img{
+	display: block;
+	width: 200px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+}
+
+.goods_regi_form_content {
+    display: block;
+    margin: 30px auto 0 auto;
+    font-size: 20px;
+    border: 1px solid #c0c0c0;
+    resize: none;
+}
+.goods_regi_form_content:focus {
+    outline: none;
+}
+.goods_regi_form_content::placeholder {
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 16px;
+}
+.goods_submit_btn {
+    width:500px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: flex-end;
+}
+.goods_submit_btn input {
+    width: 80px;
+    height: 32px;
+    font-size: 15px;
+    background-color: #1B7850;
+    border: 1px solid #1B7850;
+    border-radius: 5px;
+    color: white;
+    font-family: 'Nanum Gothic', sans-serif;
+    margin-left: 20px;
+    cursor: pointer;
+}

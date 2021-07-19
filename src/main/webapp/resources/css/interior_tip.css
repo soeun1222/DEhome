@@ -1,0 +1,576 @@
+/*-메인컬러 : #1b7850;-*/
+/*-포인트컬러 : #ffe88c;-*/
+
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Nanum+Gothic&display=swap');
+
+.font_green {
+    color: #1b7850;
+}
+
+.font_dohyeon {
+    font-family: 'Do Hyeon', sans-serif; 
+}
+
+.font_bold {
+    font-weight: bold;
+}
+
+.font_bolder {
+    font-weight: bolder;
+}
+
+/*--인테리어 팁 리스트 페이지--*/
+
+#interior_tip_list {
+    width: 1080px;
+    margin: 60px auto;
+
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+#interior_tip_list .tip_content {
+    height: 320px;
+    margin-bottom: 50px;
+}
+
+#interior_tip_list .tip_content .tip_title {
+    margin-bottom: 20px;
+}
+
+#interior_tip_list .tip_content .tip_title p {
+    font-size: 16px;
+    letter-spacing: -1px;
+    margin-left: 5px;
+    color: #333;
+}
+
+#interior_tip_list .tip_content .tip_title p:nth-child(2) {
+    font-family: 'Do Hyeon', sans-serif;
+    letter-spacing: -2px;
+    font-size: 40px;
+    margin-bottom: 8px;
+}
+
+
+
+#interior_tip_list .tip_content .tipcon_box {
+    width: 254px;
+    border-radius: 10px;
+
+    float: left;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#interior_tip_list .tip_content a .tipcon_box:first-child {
+    margin-right: 16px;
+}
+
+#interior_tip_list .tip_content a .tipcon_box:nth-child(2) {
+    margin-right: 16px;
+}
+
+#interior_tip_list .tip_content a .tipcon_box .tipcon_img {
+    width: 254px;
+    height: 160px;
+    overflow: hidden;
+}
+
+#interior_tip_list .tip_content a .tipcon_box img {
+    width: 254px;
+    height: 156px;
+    border-bottom: 4px solid #ffe88c;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    object-fit: cover;
+}
+
+#interior_tip_list .tip_content a .tipcon_box:hover img {
+    transform: scale(1.2);
+    transition-duration: 0.5s;
+}
+
+#interior_tip_list .tip_content a .tipcon_box:hover {
+    background-color: #ececec;
+    transition-duration: 0.5s;
+}
+
+
+#interior_tip_list .tip_content a .tipcon_box input {
+    width: 33px;
+    height: 35px;
+
+    position: absolute;
+    right: 10px;
+    top: 110px;
+
+    background: url('../images/bookmark_off_g.png');
+    border: none;
+}
+
+#interior_tip_list .tip_content a .tipcon_box input:hover {
+    cursor: pointer;
+    background: url('../images/bookmark_hover.png');
+    transition-duration: 0.5s;
+}
+#interior_tip_list .tip_content a .tipcon_box .bm_on {
+	width: 33px;
+    height: 35px;
+
+    position: absolute;
+    right: 10px;
+    top: 110px;
+    
+    background: url('../images/bookmark_on.png');
+    border: none;
+}
+
+#interior_tip_list .tip_content a .tipcon_box .bm_on:hover {
+	cursor: pointer;
+    background: url('../images/bookmark_hover_g.png');
+    transition-duration: 0.5s;
+}
+
+#interior_tip_list .tip_content a .tipcon_box p {
+    width: 254px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    letter-spacing: -1px;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    padding: 5px;
+    padding-top: 10px;
+}
+
+
+#interior_tip_list .tip_content a .tipcon_box p:last-child {
+    font-size: 13px;
+    font-weight: normal;
+    letter-spacing: -0.5px;
+
+    padding-top: 5px;
+    padding-bottom: 15px;
+}
+
+#interior_tip_list .tip_content .tip_title .more {
+    float: right;
+    margin-right: 10px;
+    margin-top: 32px;
+    background-color: white;
+    border: 1px solid #888;
+    padding: 5px 40px;
+    border-radius: 5px;
+
+    color: #333;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+#interior_tip_list .tip_content .tip_title .more:hover {
+    cursor: pointer;
+    background-color: #1b7850;
+    border: 1px solid #1b7850;
+    color: white;
+    transition-duration: 0.1s;
+}
+
+
+/*--인테리어 팁 개별 리스트--*/
+
+#part_tip_list {
+    width: 1080px;
+    margin: 80px auto;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+
+#part_tip_list table tr td {
+    width: 1050px;
+    padding-bottom: 40px;
+}
+
+#part_tip_list table tr td #shop {
+	width: 330px;
+	height: 300px;
+    border-radius: 20px;
+}
+
+#part_tip_list table tr td #shop:hover {
+    /* background-color: #edf1f0; */
+    background-color: #ececec;
+    transition-duration: 0.5s;
+}
+
+
+#part_tip_list table tr td:first-child {
+    padding-right: 0px;
+    padding-left: 20px;
+}
+
+#part_tip_list table tr td:nth-child(2) {
+    padding-right: 30px;
+}
+
+#part_tip_list table tr td:nth-child(3) {
+    padding-right: 15px;
+}
+
+#part_tip_list table tr td a {
+    display: block;
+    float: left;
+
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+#part_tip_list table tr td .shop_img {
+    width: 330px;
+    height: 204px;
+    border-top-left-radius: 19px;
+    border-top-right-radius: 19px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    background-color: black;
+
+    position: relative;
+}
+
+#part_tip_list table tr td .shop_img input {
+    width: 33px;
+    height: 35px;
+
+    position: absolute;
+    top: 150px;
+    right: 15px;
+    z-index: 1;
+
+    background: url('../images/bookmark_off_g.png');
+    border: none;
+}
+
+#part_tip_list table tr td .shop_img input:hover {
+    cursor: pointer;
+    background: url('../images/bookmark_hover.png');
+    transition-duration: 0.5s;
+
+}
+
+#part_tip_list table tr td .shop_img .bm_on {
+	width: 33px;
+    height: 35px;
+
+    position: absolute;
+    top: 150px;
+    right: 15px;
+    z-index: 1;
+    
+    background: url('../images/bookmark_on.png');
+    border: none;
+}
+
+#part_tip_list table tr td .shop_img .bm_on:hover {
+	cursor: pointer;
+    background: url('../images/bookmark_hover_g.png');
+    transition-duration: 0.5s;
+}
+
+#part_tip_list table tr td .shop_img img {
+    width: 330px;
+    height: 200px;
+    transform: scale(1);
+    /* border-bottom: 4px solid #1b7850; */
+    border-bottom: 4px solid #ffe88c;
+}
+
+#part_tip_list table tr td #shop:hover .shop_img img {
+    transform: scale(1.2);
+    opacity: 50%;
+    transition-duration: 0.5s;
+    object-fit: cover;
+}
+
+#part_tip_list table tr td .shop_ex {
+    margin-left: 5px;
+    padding-bottom: 20px;
+    font-size: 15px;
+    color: #333;
+}
+
+#part_tip_list table tr td .shop_ex p {
+    margin-top: 5px;
+    letter-spacing: -0.5px;
+}
+
+#part_tip_list table tr td .shop_ex .shop_name {
+    font-size: 20px;
+    font-weight: bolder;
+    letter-spacing: -1px;
+    padding-bottom: 5px;
+}
+
+
+#part_tip_list #company_title {
+    width: 1060px;
+    margin: 0 auto;
+}
+
+#part_tip_list #company_title input {
+    float: right;
+    margin-right: 10px;
+    margin-top: 25px;
+    background-color: #1b7850;
+    padding: 7px 36px;
+    border: none;
+    border-radius: 5px;
+
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#part_tip_list #company_title input:hover {
+    cursor: pointer;
+    background-color: #ffe88c;
+    color: #333;
+    transition-duration: 0.3s;
+}
+
+#part_tip_list #company_title p {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: -2px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#part_tip_list #company_title p span {
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 60px;
+    letter-spacing: -1px;
+    margin-right: 5px;
+}
+
+
+#part_tip_list #tip_sub_title {
+    width: 1020px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    margin-bottom: 50px;
+    border-top: 1px solid #ccc;
+    background-color: #edf1f0;
+    border-end-start-radius: 10px;
+    border-end-end-radius: 10px;
+}
+
+#part_tip_list #tip_sub_title span {
+    color: #555;
+    font-size: 15px;
+    display: inline-block;
+    height: 27px;
+    line-height: 24px;
+}
+
+#move_btn {
+    width: 1050px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#move_btn input {
+    width: 1050px;
+    height: 45px;
+
+    color: #666;
+    font-size: 14px;
+    letter-spacing: -1px;
+
+    background-color: white;
+    border: 1px solid #ccc;
+    border-top: 4px solid #1b7850;
+    border-end-start-radius: 20px;
+    border-end-end-radius: 20px;
+}
+
+#move_btn input:hover {
+    cursor: pointer;
+    background-color: rgb(243, 243, 243);
+    transition-duration: 0.3s;
+}
+
+/*--인테리어 팁 상세페이지--*/
+
+#tip_page {
+    width: 1080px;
+    margin: 80px auto;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+#tip_page .tip_top {
+    width: 1080px;
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+}
+
+#tip_page .tip_top img {
+    position: absolute;
+    top: -200px;
+    /* object-fit: cover; */
+}
+
+#tip_page .tip_title {
+    width: 1060px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 20px;
+
+    color: #333;
+    letter-spacing: -1px;
+}
+
+#tip_page .tip_title p:first-child {
+    float: right;
+    font-size: 14px;
+    color: #444;
+    letter-spacing: 0.5px;
+
+    margin-top: 20px;
+}
+
+#tip_page .tip_title p:nth-child(2) {
+    color: #1b7850;
+    font-size: 25px;
+    font-family: 'Do Hyeon', sans-serif;
+    padding: 10px 0px;
+
+    border-bottom: 1px solid #ccc;
+}
+
+#tip_page .tip_title p:nth-child(3) {
+    float: right;
+    font-size: 14px;
+    color: #444;
+    letter-spacing: -0.5px;
+
+    margin-top: 20px;
+    padding-left: 5px;
+}
+
+#tip_page .tip_title p:nth-child(3) span {
+    font-weight: bold;
+}
+
+#tip_page .tip_title p:nth-child(4) {
+    font-size: 30px;
+    font-weight: bolder;
+    margin-top: 20px;
+}
+
+#tip_page .tip_title p:nth-child(5) {
+    float: right;
+    width: 33px;
+    height: 35px;
+    margin-right: 8px;
+}
+
+#tip_page .tip_title p:nth-child(5) input {
+    width: 33px;
+    height: 35px;
+
+    background: url('../images/bookmark_off_g.png');
+    border: none;
+}
+
+#tip_page .tip_title p:nth-child(5) input:hover {
+    cursor: pointer;
+    background: url('../images/bookmark_hover.png');
+    transition-duration: 0.5s;
+}
+
+#tip_page .tip_title p:nth-child(5) .bm_on {
+	width: 33px;
+    height: 35px;
+    
+    background: url('../images/bookmark_on.png');
+    border: none;
+}
+
+#tip_page .tip_title p:nth-child(5) .bm_on:hover{
+	cursor: pointer;
+    background: url('../images/bookmark_hover_g.png');
+    transition-duration: 0.5s;
+}
+
+#tip_page .tip_title p:nth-child(6) {
+    font-size: 18px;
+    font-weight: bolder;
+    color: #999;
+
+    margin-top: 15px;
+    padding-left: 5px;
+}
+
+#tip_page .tip_content {
+    width: 1060px;
+    margin: 0 auto;
+
+    border-top: 1px solid #ccc;
+}
+
+#tip_page .tip_content p {
+    padding: 5px;
+    margin: 20px 0px;
+
+    font-size: 15px;
+    color: #555;
+    letter-spacing: -1px;
+    line-height: 25px;
+}
+
+#tip_page .tip_content .tip_img {
+    width: 550px;
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#tip_page .tip_content .tip_img img {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+#list_btn {
+    width: 1055px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+#list_btn input {
+    width: 1055px;
+    height: 45px;
+
+    color: #666;
+    font-size: 14px;
+    letter-spacing: -1px;
+
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+}
+
+#list_btn input:hover {
+    cursor: pointer;
+    background-color: #1b7850;
+    border: 1px solid #1b7850;
+    color: white;
+    font-weight: bold;
+    transition-duration: 0.3s;
+}

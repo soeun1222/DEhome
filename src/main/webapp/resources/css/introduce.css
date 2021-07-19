@@ -1,0 +1,83 @@
+/* ----리스트---- */
+#introduce {
+	width: 1080px;
+	margin: 100px auto;
+	font-family: 'Nanum Gothic', sans-serif;
+}
+
+#title {
+	font-family: 'Do Hyeon', sans-serif;
+	font-size: 60px;
+	letter-spacing: -1px;
+	margin-top: 30px;
+	color: #1b7850;
+	font-weight: bold;
+}
+
+#sub_title {
+	font-family: 'Do Hyeon', sans-serif;
+	font-size: 30px;
+	letter-spacing: -1px;
+	margin-top: 30px;
+	color: black;
+	font-weight: bold;
+}
+
+#sub_title img {
+	width: 1000px;
+}
+
+
+#board_title input {
+	float: right;
+	margin-right: 150px;
+	margin-left: 200px;
+	margin-top: 25px;
+	/* background-color: #1b7850; */
+	background-color: white;
+	padding: 7px 36px;
+	border: #ccc 2px solid;
+	border-radius: 5px;
+	color: #555;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+
+#table {
+	width: 1000px;
+	margin-top: 20px;
+	text-align: center;
+	color: #1b7850;
+/* 	background-color: gray; */
+}
+
+#table td {
+	padding: 20px;
+/* 	border: 1px solid black; */
+	color: black;
+}
+
+#table td img{
+	width: 450px;
+}
+
+.table_content{
+	font-family: 'Do Hyeon', sans-serif;
+	font-size: 30px;
+	letter-spacing: -1px;
+	margin-top: 30px;
+	font-weight: bold;
+	text-align: left;
+	
+}
+.sub_title_content{
+	font-size: 23px;
+}
+
+
+#map {
+	width: 1000px;
+	height: 500px;
+}
+

@@ -1,0 +1,1727 @@
+/*-硫붿씤而щ윭 : #1b7850;-*/
+/*-�룷�씤�듃而щ윭 : #ffe88c;-*/
+
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Nanum+Gothic&display=swap');
+
+.font_green {
+    color: #1b7850;
+}
+
+.font_dohyeon {
+    font-family: 'Do Hyeon', sans-serif; 
+}
+
+.font_bold {
+    font-weight: bold;
+}
+
+.font_bolder {
+    font-weight: bolder;
+}
+
+/*--�씤�뀒由ъ뼱 �뾽泥� 由ъ뒪�듃 �럹�씠吏�--*/
+
+#interior_company {
+    width: 1080px;
+    margin: 80px auto;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+
+#interior_company table tr td {
+    width: 300px;
+    padding-bottom: 40px;
+}
+
+#interior_company table tr td #shop {
+    border-radius: 20px;
+}
+
+#interior_company table tr td #shop:hover {
+    /* background-color: #edf1f0; */
+    background-color: #ececec;
+    transition-duration: 0.5s;
+}
+
+
+#interior_company table tr td:first-child {
+    padding-right: 30px;
+    padding-left: 15px;
+}
+
+#interior_company table tr td:nth-child(2) {
+    padding-right: 30px;
+}
+
+#interior_company table tr td:nth-child(3) {
+    padding-right: 15px;
+}
+
+#interior_company table tr td .shop_img {
+    width: 330px;
+    height: 204px;
+    border-top-left-radius: 19px;
+    border-top-right-radius: 19px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    background-color: black;
+}
+
+#interior_company table tr td .shop_img img {
+    width: 330px;
+    height: 200px;
+    transform: scale(1);
+    /* border-bottom: 4px solid #1b7850; */
+    border-bottom: 4px solid #ffe88c;
+}
+
+#interior_company table tr td #shop:hover .shop_img img {
+    transform: scale(1.2);
+    opacity: 50%;
+    transition-duration: 0.5s;
+}
+
+#interior_company table tr td .shop_ex {
+    margin-left: 5px;
+    padding-bottom: 20px;
+    font-size: 15px;
+    color: #333;
+}
+
+#interior_company table tr td .shop_ex p {
+    margin-top: 5px;
+    letter-spacing: -0.5px;
+}
+
+#interior_company table tr td .shop_ex .shop_name {
+    font-size: 18px;
+    font-weight: bolder;
+    letter-spacing: -1px;
+    padding-bottom: 5px;
+}
+
+#interior_company table tr td .star {
+    float: right;
+    margin-right: 5px;
+}
+
+#interior_company table tr td .star img {
+    width: 20px;
+    height: 20px;
+    margin-right: 2px;
+}
+
+#interior_company table tr td .star span {
+    font-size: 16px;
+    font-weight: bold;
+    color: #1b7850;
+    vertical-align: 4px;
+}
+
+#interior_company #page {
+    width: 270px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+#interior_company #page a {
+    margin: 0px 10px;
+    padding: 0px 2px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #555;
+    border-bottom: 2px solid white;
+}
+
+#interior_company #page a:hover {
+    color: #1b7850;
+    border-bottom: 2px solid #1b7850;
+    transition-duration: 0.3s;
+}
+
+#interior_company #page .page_before {
+    font-size: 19px;
+    font-weight: bolder;
+    color: #1b7850;
+    vertical-align: -1px;
+}
+
+#interior_company #page .page_before:hover {
+    border: none;
+    color: #ffe88c;
+}
+
+#interior_company #page .page_next {
+    font-size: 19px;
+    font-weight: bolder;
+    color: #1b7850;
+    vertical-align: -1px;
+}
+
+#interior_company #page .page_next:hover {
+    border: none;
+    color: #ffe88c;
+}
+
+#interior_company #company_title {
+    width: 1060px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+#interior_company #company_title input {
+    float: right;
+    margin-right: 10px;
+    margin-top: 45px;
+    background-color: #1b7850;
+    padding: 7px 36px;
+    border: none;
+    border-radius: 5px;
+
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#interior_company #company_title input:hover {
+    cursor: pointer;
+    background-color: #ffe88c;
+    color: #333;
+    transition-duration: 0.3s;
+}
+
+#interior_company #company_title p {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: -2px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#interior_company #company_title p span {
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 60px;
+    letter-spacing: -1px;
+    margin-right: 5px;
+}
+
+
+#interior_company #company_title p:nth-child(3) {
+    font-size: 15px;
+    font-weight: normal;
+    letter-spacing: -1px;
+    color: #333;
+}
+
+#interior_company #company_location_search {
+    width: 1020px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    margin-bottom: 50px;
+    border-top: 1px solid #ccc;
+    background-color: #edf1f0;
+    border-end-start-radius: 10px;
+    border-end-end-radius: 10px;
+}
+
+#interior_company #company_location_search span {
+    color: #666;
+    font-size: 14px;
+    display: inline-block;
+    height: 27px;
+    line-height: 24px;
+}
+
+#interior_company #company_location_search input {
+    float: right;
+    margin-right: 5px;
+    padding: 4px 14px;
+
+    border: none;
+    background-color: #1b7850;
+    border-radius: 5px;
+
+    color: white;
+    cursor: pointer;
+}
+
+#interior_company #company_location_search input:hover {
+    background-color: #ffe88c;
+    color: #333;
+    font-weight: bold;
+    transition-duration: 0.3s;
+}
+
+
+/*--�씤�뀒由ъ뼱 �뾽泥� �긽�꽭 �럹�씠吏�--*/
+
+#company_page {
+    width: 1000px;
+    margin: 50px auto;
+    font-family: 'Nanum Gothic', sans-serif;
+    margin-bottom: 70px;
+    
+    position: relative;
+}
+
+#company_page img {
+    width: 1000px;
+    height: 450px;
+}
+
+#company_page .company_top_box {
+    width: 330px;
+    height: 390px;
+    opacity: 80%;
+    background-color: white;
+    border-bottom: 6px solid #ffe88c;
+    position: absolute;
+    top: 25px;
+    right: 50px;
+}
+
+#company_page .company_top {
+    width: 290px;
+    height: 314px;
+    /* border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom: 6px solid #ffe88c; */
+    padding: 40px 20px;
+
+    position: absolute;
+    top: 25px;
+    right: 50px;
+}
+
+#company_page .company_top .company_star img {
+    width: 20px;
+    height: 20px;
+}
+
+#company_page .company_top p {
+    font-size: 15px;
+    letter-spacing: -0.5px;
+    text-align: center;
+    padding: 5px;
+    line-height: 20px;
+    color: #333;
+}
+
+#company_page .company_top p:first-child {
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: -1px;
+
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+#company_page .company_top p:nth-child(3) {
+    font-weight: bold;
+    font-size: 17px;
+    letter-spacing: -1px;
+    color: #333;
+    /* background-color: #ffe88c;
+    border-bottom: 2px solid #1b7850; */
+}
+
+#company_page .company_top p:nth-child(4) {
+    width: 278px;
+    margin: 5px auto;
+    text-align: left;
+    line-height: 25px;
+    font-size: 14px;
+    /* padding: 10px 0px;
+    border-top: 1px solid #888;
+    border-bottom: 1px solid #888; */
+}
+
+#company_page .company_top p:nth-child(5) {
+    font-weight: bold;
+}
+
+#company_page .company_top .company_star {
+    width: 160px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+#company_page .company_top .company_star span {
+    font-size: 19px;
+    font-weight: bolder;
+    color: #222;
+    letter-spacing: -1px;
+    vertical-align: 3px;
+    margin-left: 5px;
+}
+
+#company_page .company_top .company_btn {
+    width: 280px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+#company_page .company_top .company_btn input {
+    background-color: #1b7850;
+    padding: 8px 40px;
+    border: none;
+    border-radius: 5px;
+
+    color: white;
+    font-size: 14px;
+}
+
+
+#company_page .company_top .company_btn input:hover {
+    cursor: pointer;
+    background-color: #ffe88c;
+    transition-duration: 0.3s;
+    color: #333;
+    font-weight: bold;
+}
+
+
+#company_title {
+    width: 1000px;
+    margin: 0 auto;
+    
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+#company_title p {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    color: #333;
+}
+
+#company_title p span {
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 50px;
+    margin-right: 5px;
+}
+
+#company_title p:nth-child(2) {
+    font-weight: normal;
+    font-size: 15px;
+    color: #333;
+    letter-spacing: -0.8px;
+}
+
+
+#company_title input {
+    float: right;
+    margin-top: 50px;
+    margin-right: 10px;
+    background-color: white;
+    border: 1px solid #888;
+    padding: 5px 40px;
+    border-radius: 5px;
+
+    color: #333;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#company_title input:hover {
+    cursor: pointer;
+    background-color: #1b7850;
+    border: 1px solid #1b7850;
+    color: white;
+    transition-duration: 0.1s;
+}
+
+#review_content {
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 80px;
+    font-family: 'Nanum Gothic', sans-serif;
+
+    /* border-top: 2px solid #1b7850; */
+}
+
+#review_content a {
+    width: 492px;
+    height: 226px;
+    display: block;
+
+    margin-bottom: 40px;
+}
+
+#review_content a:hover {
+    background-color: rgb(245, 245, 245);
+    border-radius: 20px;
+}
+
+#review_content a:first-child {
+    float: left;
+}
+#review_content a:nth-child(2) {
+    float: right;
+}
+
+#review_content a .recon_01 {
+    width: 440px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    float: left;
+
+    padding: 25px;
+}
+
+#review_content a .recon_01 p img {
+    width: 15px;
+    height: 15px;
+    margin: 0;
+    padding-bottom: 5px;
+}
+
+
+#review_content a .recon_01 p span {
+    float: right;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    color: #333;
+
+    margin-right: 6px;
+}
+
+#review_content a .recon_01 p span:first-child {
+    float: none;
+    color: #1b7850;
+    font-size: 17px;
+}
+
+#review_content a .recon_01 p:nth-child(2) {
+    width: 230px;
+    height: 140px;
+
+    overflow: hidden;
+    float: left;
+
+    font-size: 13px;
+    line-height: 20px;
+    color: #333;
+
+    margin-top: 15px;
+}
+
+#review_content a .recon_01 img {
+    width: 200px;
+    height: 140px;
+    border-radius: 10px;
+    object-fit: cover;
+    vertical-align: -6px;
+
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+#company_work {
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 70px;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+#company_work table tr td {
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+    font-weight: 500;
+
+    padding-bottom: 20px;
+}
+
+#company_work table tr td div {
+    width: 320px;
+    height: 200px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#company_work table tr td img {
+    width: 320px;
+    height: 200px;
+    border-radius: 15px;
+    transform: scale(1);
+}
+
+#company_work table tr td a:hover img {
+    transform: scale(1.2);
+    transition-duration: 0.5s;
+}
+
+#company_work table tr td p {
+    padding-top: 10px;
+}
+
+#company_work table tr td:first-child {
+    padding-right: 20px;
+}
+
+#company_work table tr td:nth-child(2) {
+    padding-right: 20px;
+}
+
+#move_btn {
+    width: 1050px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#move_btn input {
+    width: 1050px;
+    height: 45px;
+
+    color: #666;
+    font-size: 14px;
+    letter-spacing: -1px;
+
+    background-color: white;
+    border: 1px solid #ccc;
+    border-top: 4px solid #1b7850;
+    border-end-start-radius: 20px;
+    border-end-end-radius: 20px;
+}
+
+#move_btn input:hover {
+    cursor: pointer;
+    background-color: rgb(243, 243, 243);
+    transition-duration: 0.3s;
+}
+
+
+#move_btn2 {
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#move_btn2 input {
+    width: 1000px;
+    height: 45px;
+
+    color: #666;
+    font-size: 14px;
+    letter-spacing: -1px;
+
+    background-color: white;
+    border: 1px solid #ccc;
+    border-top: 4px solid #1b7850;
+    border-end-start-radius: 20px;
+    border-end-end-radius: 20px;
+}
+
+#move_btn2 input:hover {
+    cursor: pointer;
+    background-color: rgb(243, 243, 243);
+    transition-duration: 0.3s;
+}
+
+/*--�떆怨듬━酉� �긽�꽭�럹�씠吏�--*/
+
+#review_page {
+    width: 1000px;
+    margin: 80px auto;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+#review_page .review_top {
+    width: 1000px;
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+}
+
+#review_page .review_top img {
+    position: absolute;
+    top: -200px;
+    /* object-fit: cover; */
+}
+
+#review_page .review_title {
+    width: 980px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 20px;
+
+    color: #333;
+    letter-spacing: -1px;
+}
+
+#review_page .review_title p:first-child {
+    float: right;
+    font-size: 14px;
+    color: #444;
+    letter-spacing: 0.5px;
+
+    margin-top: 20px;
+}
+
+#review_page .review_title p:nth-child(2) {
+    color: #1b7850;
+    font-size: 35px;
+    font-family: 'Do Hyeon', sans-serif;
+    padding: 10px 0px;
+
+    border-bottom: 1px solid #ccc;
+}
+
+#review_page .review_title p:nth-child(3) {
+    float: right;
+    font-size: 16px;
+    color: #444;
+    letter-spacing: -0.5px;
+
+    margin-top: 20px;
+    padding-left: 5px;
+    margin-right: 5px;
+}
+
+#review_page .review_title p:nth-child(3) span {
+    font-weight: bold;
+}
+
+#review_page .review_title p:nth-child(4) {
+    font-size: 30px;
+    font-weight: bolder;
+    margin-top: 20px;
+}
+
+#review_page .review_title p:nth-child(5) {
+    float: right;
+    width: 33px;
+    height: 35px;
+    margin-right: 8px;
+}
+
+#review_page .review_title p:nth-child(5) input {
+    width: 33px;
+    height: 35px;
+
+    background: url('images/star_35_off.png');
+    border: none;
+}
+
+#review_page .review_title p:nth-child(5) input:hover {
+    cursor: pointer;
+    background: url('images/star_35_hover.png');
+    transition-duration: 0.5s;
+}
+
+#review_page .review_title p:nth-child(6) {
+    font-size: 18px;
+    font-weight: bolder;
+    color: #999;
+
+    margin-top: 15px;
+    padding-left: 5px;
+}
+
+#review_page .review_content {
+    width: 980px;
+    margin: 0 auto;
+
+    border-top: 1px solid #ccc;
+}
+
+#review_page .review_content p {
+    padding: 5px;
+    margin: 20px 0px;
+
+    font-size: 15px;
+    color: #555;
+    letter-spacing: -1px;
+    line-height: 25px;
+}
+
+#review_page .review_content .review_img {
+    width: 970px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#review_page .review_content .review_img img {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+#list_btn {
+    width: 975px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+#list_btn input {
+    width: 975px;
+    height: 45px;
+
+    color: #666;
+    font-size: 14px;
+    letter-spacing: -1px;
+
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+}
+
+#list_btn input:hover {
+    cursor: pointer;
+    background-color: #1b7850;
+    border: 1px solid #1b7850;
+    color: white;
+    font-weight: bold;
+    transition-duration: 0.3s;
+}
+
+/*--�떆怨듬━酉� �긽�꽭�럹�씠吏�--*/
+
+#case_page {
+    width: 1000px;
+    margin: 80px auto;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+#case_page .case_top {
+    width: 1000px;
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+}
+
+#case_page .case_top img {
+    position: absolute;
+    top: -200px;
+    /* object-fit: cover; */
+}
+
+#case_page .case_title {
+    width: 980px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 20px;
+
+    color: #333;
+    letter-spacing: -1px;
+}
+
+#case_page .case_title p:first-child {
+    float: right;
+    font-size: 14px;
+    color: #444;
+    letter-spacing: 0.5px;
+
+    margin-top: 20px;
+}
+
+#case_page .case_title p:nth-child(2) {
+    color: #1b7850;
+    font-size: 35px;
+    font-family: 'Do Hyeon', sans-serif;
+    padding: 10px 0px;
+
+    border-bottom: 1px solid #ccc;
+}
+
+#case_page .case_title p:nth-child(3) {
+    float: right;
+    font-size: 18px;
+    font-weight: bolder;
+    color: #999;
+
+    margin-top: 25px;
+    padding-right: 5px;
+}
+
+#case_page .case_title p:nth-child(4) {
+    font-size: 28px;
+    font-weight: bolder;
+    letter-spacing: -1px;
+    margin-top: 20px;
+    padding-left: 5px;
+}
+
+#case_page .case_content {
+    width: 980px;
+    margin: 0 auto;
+
+    border-top: 1px solid #ccc;
+}
+
+#case_page .case_content p {
+    padding: 5px;
+    margin: 20px 0px;
+
+    font-size: 15px;
+    color: #555;
+    letter-spacing: -1px;
+    line-height: 25px;
+}
+
+#case_page .case_content .case_img {
+    width: 970px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#case_page .case_content .case_img img {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+
+
+/*--0615 추가--*/
+
+#review_content a {
+    height: auto;
+    margin-bottom: 10px;
+}
+
+#review_page .review_title p:nth-child(5) {
+    float: right;
+    margin-right: 122px;
+}
+
+#review_page .review_title p:nth-child(5) input {
+    width: 150px;
+    height: 35px;
+    padding: 0 10px 0 10px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+
+    text-align: left;
+    color: #666;
+
+    background-image: url('../images/re_interest_off.png');
+    background-size: 28px;
+    background-repeat: no-repeat;
+    background-position-x: 112px;
+    background-position-y: 2px;
+}
+
+#review_page .review_title p:nth-child(5) input:hover {
+    cursor: pointer;
+    transition-duration: 0.7s;
+
+    border: 2px solid #ffe88c;
+    color: #1b7850;
+    font-weight: bold;
+
+    background-image: url('../images/re_interest_on.png');
+    background-size: 28px;
+    background-repeat: no-repeat;
+    background-position-x: 6px;
+    background-position-y: 2px;
+    text-align: right;
+}
+
+#review_page .review_title p input.like_on {
+
+    border: 2px solid #ffe88c;
+    color: #1b7850;
+    font-weight: bold;
+
+    background-image: url('../images/re_interest_on.png');
+    background-size: 28px;
+    background-repeat: no-repeat;
+    background-position-x: 6px;
+    background-position-y: 2px;
+    text-align: right;
+}
+
+#review_page .review_title p input.like_on:hover {
+    cursor: pointer;
+
+    padding: 0 10px 0 10px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+
+    text-align: left;
+    color: #666;
+
+    background-image: url('../images/re_interest_off.png');
+    background-size: 28px;
+    background-repeat: no-repeat;
+    background-position-x: 112px;
+    background-position-y: 2px;
+}
+
+
+
+
+/*--company_page쪽 리뷰 list icon--*/
+#review_content tr td .like input {
+    width: 135px;
+    height: 35px;
+    padding: 0 10px 0 45px;
+    border-radius: 20px;
+
+    border: 2px solid #ffe88c;
+    color: #1b7850;
+    font-weight: bold;
+
+    background-image: url('../images/re_interest_on.png');
+    background-size: 28px;
+    background-repeat: no-repeat;
+    background-position-x: 6px;
+    background-position-y: 2px;
+    text-align: left;
+
+    background-color: white;
+}
+
+#review_content tr td .like span {
+    line-height: 32px;
+}
+
+
+/*--company_page쪽 상단 기업로그인 및 매니저로그인 버튼 1개 사이즈 수정--*/
+#company_page .company_top .company_btn input.oneBtn {
+	padding: 8px 95px;
+}
+
+
+/*--리뷰수정(review_edit) 버튼--*/
+#review_page .review_title p input.editBtn {
+	border-radius: 10px;
+	background-image: none;
+	text-align: center;
+	
+	font-weight: bold;
+	color: #999;
+}
+
+#review_page .review_title p input.editBtn:hover {
+	border-radius: 10px;
+	background-image: none;
+	text-align: center;
+	border: 2px solid #1b7850;
+	background-color: #1b7850;
+	
+	font-weight: bold;
+	color: white;
+	transition-duration: 0.3s;
+}
+
+
+/*--사례수정(cons_case_edit) 버튼--*/
+#case_page .case_title p input.editBtn {
+	width: 140px;
+    height: 35px;
+    padding: 0 20px;
+	border: 2px solid #ccc;
+	border-radius: 10px;
+	
+	margin-top: -20px;
+	
+	text-align: center;
+	font-weight: bold;
+	color: #999;
+	background-color: white;
+}
+
+#case_page .case_title p input.editBtn:hover {
+	cursor: pointer;
+	border: 2px solid #1b7850;
+	background-color: #1b7850;
+	
+	color: white;
+	transition-duration: 0.3s;
+}
+
+
+
+
+
+/*--0623_PSE--*/
+
+#company_total_box {
+	width: 1060px;
+	height: auto;
+	margin: 0 auto;
+	padding-left: 15px;
+}
+
+#company_total_box .company_box {
+    width: 330px;
+    float: left;
+    padding-bottom: 40px;
+    margin-right: 23px;
+}
+
+#company_total_box .company_box #shop {
+    border-radius: 20px;
+}
+
+#company_total_box .company_box #shop:hover {
+    /* background-color: #edf1f0; */
+    background-color: #ececec;
+    transition-duration: 0.5s;
+}
+
+
+#company_total_box .company_box .shop_img {
+    width: 330px;
+    height: 204px;
+    border-top-left-radius: 19px;
+    border-top-right-radius: 19px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    background-color: black;
+}
+
+#company_total_box .company_box .shop_img img {
+    width: 330px;
+    height: 200px;
+    transform: scale(1);
+    /* border-bottom: 4px solid #1b7850; */
+    border-bottom: 4px solid #ffe88c;
+}
+
+#company_total_box .company_box #shop:hover .shop_img img {
+    transform: scale(1.2);
+    opacity: 50%;
+    transition-duration: 0.5s;
+}
+
+#company_total_box .company_box .shop_ex {
+    margin-left: 5px;
+    padding-bottom: 20px;
+    font-size: 15px;
+    color: #333;
+}
+
+#company_total_box .company_box .shop_ex p {
+    margin-top: 5px;
+    letter-spacing: -0.5px;
+}
+
+#company_total_box .company_box .shop_ex .shop_name {
+    font-size: 18px;
+    font-weight: bolder;
+    letter-spacing: -1px;
+    padding-bottom: 5px;
+}
+
+#company_total_box .company_box .star {
+    float: right;
+    margin-right: 5px;
+}
+
+#company_total_box .company_box .star img {
+    width: 20px;
+    height: 20px;
+    margin-right: 2px;
+}
+
+#company_total_box .company_box .star span {
+    font-size: 16px;
+    font-weight: bold;
+    color: #1b7850;
+    vertical-align: 4px;
+}
+
+
+#move_btn {
+    width: 1050px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#move_btn button {
+    width: 1050px;
+    height: 45px;
+
+    color: #666;
+    font-size: 14px;
+    letter-spacing: -1px;
+
+    background-color: white;
+    border: 1px solid #ccc;
+    border-top: 4px solid #1b7850;
+    border-end-start-radius: 20px;
+    border-end-end-radius: 20px;
+}
+
+#move_btn button:hover {
+    cursor: pointer;
+    background-color: rgb(243, 243, 243);
+    transition-duration: 0.3s;
+}
+
+
+#move_btn2 {
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#move_btn2 button {
+    width: 1000px;
+    height: 45px;
+
+    color: #666;
+    font-size: 14px;
+    letter-spacing: -1px;
+
+    background-color: white;
+    border: 1px solid #ccc;
+    border-top: 4px solid #1b7850;
+    border-end-start-radius: 20px;
+    border-end-end-radius: 20px;
+}
+
+#move_btn2 button:hover {
+    cursor: pointer;
+    background-color: rgb(243, 243, 243);
+    transition-duration: 0.3s;
+}
+
+
+/*--0624_PSE--*/
+
+/*--company_page쪽 리뷰 list icon--*/
+#review_content {
+	width:1030px;
+}
+#review_content a {
+	float: left;
+	margin-left: 15px;
+	margin-bottom: 15px;
+}
+
+#review_content a:nth-child(2) {
+	float: left;
+}
+
+#review_content .recon_01 p.like input {
+    width: 135px;
+    height: 35px;
+    padding: 0 10px 0 45px;
+    border-radius: 20px;
+
+    border: 2px solid #ffe88c;
+    color: #1b7850;
+    font-weight: bold;
+
+    background-image: url('../images/re_interest_on.png');
+    background-size: 28px;
+    background-repeat: no-repeat;
+    background-position-x: 6px;
+    background-position-y: 2px;
+    text-align: left;
+
+    background-color: white;
+}
+
+#review_content .recon_01 p.like span {
+    line-height: 32px;
+}
+
+#review_content a:hover .recon_01 p.like input {
+    background-color: rgb(245, 245, 245);
+}
+
+
+/*--company_page쪽 시공사례 list--*/
+
+#company_work {
+    width: 1030px;
+    padding-left: 28px;
+    margin-bottom: 0px;
+}
+
+#company_work a {
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+    font-weight: 500;
+    
+    display: inline-block;
+    width: 320px;
+
+	padding-right: 15px;
+    padding-bottom: 20px;
+}
+
+#company_work a div {
+    width: 320px;
+    height: 200px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#company_work a div img {
+    width: 320px;
+    height: 200px;
+    border-radius: 15px;
+    transform: scale(1);
+}
+
+#company_work a:hover div img {
+    transform: scale(1.2);
+    transition-duration: 0.5s;
+}
+
+#company_work a p {
+    padding-top: 10px;
+}
+
+#company_work #cons_content_more {
+	width: 1030px;
+	height: auto;
+    display: block;
+}
+
+
+#company_work #cons_content_more a {
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+    font-weight: 500;
+    
+    display: inline-block;
+    width: 320px;
+    height: 224px;
+
+	padding-right: 18px;
+    padding-bottom: 20px;
+}
+
+#company_work #cons_content_more a div {
+    width: 320px;
+    height: 200px;
+    display: inline-block;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#company_work #cons_content_more a div img {
+    width: 320px;
+    height: 200px;
+    border-radius: 15px;
+    transform: scale(1);
+}
+
+#company_work #cons_content_more a:hover div img {
+    transform: scale(1.2);
+    transition-duration: 0.5s;
+}
+
+#company_work #cons_content_more a p {
+	width: 320px;
+	display: block;
+    padding-top: 10px;
+}
+
+
+#move_btn2 {
+	padding-bottom: 50px;
+}
+
+
+
+
+
+/*--0628 추가--*/
+
+#review_page #review_title {
+    width: 980px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 20px;
+
+    color: #333;
+    letter-spacing: -1px;
+}
+
+#review_page #review_title p:first-child {
+    float: right;
+    font-size: 14px;
+    color: #444;
+    letter-spacing: 0.5px;
+
+    margin-top: 20px;
+}
+
+#review_page #review_title p:nth-child(2) {
+    color: #1b7850;
+    font-size: 35px;
+    font-family: 'Do Hyeon', sans-serif;
+    padding: 10px 0px;
+
+    border-bottom: 1px solid #ccc;
+}
+
+#review_page #review_title p:nth-child(3) {
+    float: right;
+    font-size: 16px;
+    color: #444;
+    letter-spacing: -0.5px;
+
+    margin-top: 20px;
+    padding-left: 5px;
+    margin-right: 5px;
+}
+
+#review_page #review_title p:nth-child(3) span {
+    font-weight: bold;
+}
+
+#review_page #review_title p:nth-child(4) {
+    font-size: 30px;
+    font-weight: bolder;
+    margin-top: 20px;
+}
+
+
+
+#review_page #review_title #btnBox {
+	width: 155px;
+	height: 40px;
+	float: right;
+}
+
+#review_page #review_title #btnBox p:first-child {
+	float: none;
+	margin-top: 0px;
+}
+
+
+#review_page #review_title #btnBox p input {
+    width: 150px;
+    height: 35px;
+    padding: 0 10px 0 10px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+
+    text-align: left;
+    color: #666;
+
+    background-image: url('../images/re_interest_off.png');
+    background-size: 28px;
+    background-repeat: no-repeat;
+    background-position-x: 112px;
+    background-position-y: 2px;
+}
+
+#review_page #review_title #btnBox p input:hover {
+    cursor: pointer;
+    transition-duration: 0.7s;
+
+    border: 2px solid #ffe88c;
+    color: #1b7850;
+    font-weight: bold;
+
+    background-image: url('../images/re_interest_on.png');
+    background-size: 28px;
+    background-repeat: no-repeat;
+    background-position-x: 6px;
+    background-position-y: 2px;
+    text-align: right;
+}
+
+#review_page #review_title #btnBox p input.like_on {
+
+    border: 2px solid #ffe88c;
+    color: #1b7850;
+    font-weight: bold;
+
+    background-image: url('../images/re_interest_on.png');
+    background-size: 28px;
+    background-repeat: no-repeat;
+    background-position-x: 6px;
+    background-position-y: 2px;
+    text-align: right;
+}
+
+#review_page #review_title #btnBox p input.like_on:hover {
+    cursor: pointer;
+
+    padding: 0 10px 0 10px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+
+    text-align: left;
+    color: #666;
+
+    background-image: url('../images/re_interest_off.png');
+    background-size: 28px;
+    background-repeat: no-repeat;
+    background-position-x: 112px;
+    background-position-y: 2px;
+}
+
+#review_page #review_title p:nth-child(7) {
+    font-size: 18px;
+    font-weight: bolder;
+    color: #999;
+
+    margin-top: 15px;
+    padding-left: 5px;
+}
+
+
+/*--0630 추가--*/
+
+#review_page #review_title #btnBox {
+	width: 155px;
+	height: 40px;
+	float: right;
+}
+
+#review_page #review_title #btnBox p:first-child {
+	float: none;
+	margin-top: 0px;
+}
+
+
+#review_page #review_title #btnBox p input {
+    width: 150px;
+    height: 35px;
+    padding: 0 10px 0 10px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+
+    text-align: left;
+    color: #666;
+
+    background-image: url('../images/re_interest_off.png');
+    background-size: 28px;
+    background-repeat: no-repeat;
+    background-position-x: 112px;
+    background-position-y: 2px;
+}
+
+#review_page #review_title #btnBox p input:hover {
+    cursor: pointer;
+    transition-duration: 0.7s;
+
+    border: 2px solid #ffe88c;
+    color: #1b7850;
+    font-weight: bold;
+
+    background-image: url('../images/re_interest_on.png');
+    background-size: 28px;
+    background-repeat: no-repeat;
+    background-position-x: 6px;
+    background-position-y: 2px;
+    text-align: right;
+}
+
+#review_page #review_title #btnBox p input.like_on {
+
+    border: 2px solid #ffe88c;
+    color: #1b7850;
+    font-weight: bold;
+
+    background-image: url('../images/re_interest_on.png');
+    background-size: 28px;
+    background-repeat: no-repeat;
+    background-position-x: 6px;
+    background-position-y: 2px;
+    text-align: right;
+}
+
+#review_page #review_title #btnBox p input.like_on:hover {
+    cursor: pointer;
+
+    padding: 0 10px 0 10px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+
+    text-align: left;
+    color: #666;
+
+    background-image: url('../images/re_interest_off.png');
+    background-size: 28px;
+    background-repeat: no-repeat;
+    background-position-x: 112px;
+    background-position-y: 2px;
+}
+
+
+
+#review_page #review_title #btnBox {
+	width: 320px;
+	height: 35px;
+}
+
+#review_page #review_title #btnBox p {
+	width: 150px;
+	float: left;
+}
+
+#review_page #review_title #btnBox p:first-child {
+	float: left;
+}
+
+#review_page #review_title #btnBox p:nth-child(2) {
+	border-bottom: none;
+	margin-top: -14px;
+	margin-left: 10px;
+}
+
+
+/*--리뷰수정(review_edit) 버튼--*/
+
+#review_page #review_title #btnBox p input.editBtn {
+	border-radius: 10px;
+	background-image: none;
+	text-align: center;
+	background-color: #ffe88c;
+	
+	font-weight: bold;
+	color: #666;
+	border: #666;
+
+}
+
+#review_page #review_title #btnBox p input.editBtn:hover {
+	border-radius: 10px;
+	background-image: none;
+	text-align: center;
+	border: 2px solid #1b7850;
+	background-color: #1b7850;
+	
+	font-weight: bold;
+	color: white;
+	transition-duration: 0.3s;
+}
+
+
+/*--리뷰삭제(delete_ok()) 버튼--*/
+#review_page #review_title #btnBox p input.deleteBtn {
+	border-radius: 10px;
+	background-image: none;
+	text-align: center;
+	
+	font-weight: bold;
+	color: #999;
+	
+}
+
+#review_page #review_title #btnBox p input.deleteBtn:hover {
+	border-radius: 10px;
+	background-image: none;
+	text-align: center;
+	border: 2px solid #1b7850;
+	background-color: #1b7850;
+	
+	font-weight: bold;
+	color: white;
+	transition-duration: 0.3s;
+}
+
+#review_page #review_title #btnBox p.helpBtn {
+	margin-left: 165px;
+}
+
+
+
+/*--0701 PSE 수정--*/
+
+
+/*--리뷰삭제(delete_ok()) 버튼--*/
+#case_page .case_title p:nth-child(3) input.deleteBtn {
+	border-radius: 10px;
+	background-image: none;
+	text-align: center;
+	
+	font-weight: bold;
+	color: #999;
+	
+	float: right;
+	
+}
+
+#case_page .case_title p:nth-child(3) input.deleteBtn:hover {
+	border-radius: 10px;
+	background-image: none;
+	text-align: center;
+	border: 2px solid #1b7850;
+	background-color: #1b7850;
+	
+	font-weight: bold;
+	color: white;
+	transition-duration: 0.3s;
+}
+
+
+
+/*--리뷰수정(review_edit) 버튼--*/
+
+#case_page .case_title p:nth-child(4) {
+	margin-top: 10px;
+}
+
+#case_page .case_title p:nth-child(4) input.editBtn {
+	border-radius: 10px;
+	background-image: none;
+	text-align: center;
+	background-color: #ffe88c;
+	
+	font-weight: bold;
+	color: #666;
+	border: #666;
+	
+	float: right;
+	margin-right: 10px;
+	margin-top: 7px;
+}
+
+#case_page .case_title p:nth-child(4) input.editBtn:hover {
+	border-radius: 10px;
+	background-image: none;
+	text-align: center;
+	border: 2px solid #1b7850;
+	background-color: #1b7850;
+	
+	font-weight: bold;
+	color: white;
+	transition-duration: 0.3s;
+}
+
+
+
+
+
+#case_page .case_title p:nth-child(6) {
+    font-size: 28px;
+    font-weight: bolder;
+    letter-spacing: -1px;
+    margin-top: 20px;
+    padding-left: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

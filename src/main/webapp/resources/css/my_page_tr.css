@@ -1,0 +1,223 @@
+/* 마이페이지관련 메인,공통적용 */
+.page_title {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+    font: normal normal 48px 'Do Hyeon', sans-serif;
+    font-weight: bold;
+    color: #1b7850;
+    letter-spacing: -1px;
+}
+/* 마이페이지 */
+.contents_mypage {
+    width: 1250px;
+    height: 700px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+/* 마이페이지윗부분 */
+.mypage_header_box {
+    border: 1px solid lightgray;
+    width: 1199px;
+    height: 60px;
+    margin: 0 auto;
+    padding-top: 25px;
+    padding-left: 50px;
+    float: left;
+}
+/* 마이페이지 윗부분 라벨 */
+.my_page_label {
+    padding-top: 10px;
+    font: normal bold 25px 'Nanum Gothic', sans-serif ;
+    color: gray;
+}
+/* 마이페이지 사이드바 */
+.mypage_sidebar_box {
+    border: 1px solid lightgray;
+    width: 135px;
+    height: 510px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    padding-top: 15px;
+    padding-left: 15px;
+    float: left;
+}
+
+/* 마이페이지 사이드바 메뉴 */
+.mypage_side_label {
+    margin-bottom: 15px;
+    margin-top: 25px;
+    text-align: left;
+    font: normal normal 21px 'Do Hyeon', sans-serif;
+    color: #1b7850;
+}
+.mypage_side_list {
+     margin-bottom: 14px;
+    text-align: left;
+    font: normal normal 15px 'Nanum Gothic', sans-serif;
+    color: #555;
+}
+.mypage_side_list:hover {
+    color: #1B7850;
+    transition-duration: 0.3s;
+}
+.mypage_label {
+   margin-bottom: 15px;
+   text-align: left;
+   font: normal normal 27px 'Do Hyeon', sans-serif;
+   color: #333;
+}
+.mypage_side_list_1 {
+   margin-bottom: 14px;
+   text-align: left;
+   font: normal normal 15px 'Nanum Gothic', sans-serif;
+   color: #555;
+}
+.mypage_side_list_2 {
+   display: none;
+   padding: 3px;
+   margin-left: 5px;
+   margin-top: 5px;
+}
+.mypage_side_list_2 li {
+   margin-top: 8px;
+}
+.mypage_side_list:hover .mypage_side_list_2 {
+   display: block;
+   color: #333;
+}
+.mypage_side_list_1:hover .mypage_side_list_2 {
+   display: block;
+   color: #333;
+}
+.mypage_side_list_2 li:hover {
+   color: #1B7850;
+}
+
+
+/* 마이페이지 콘텐츠 테두리부분 */
+
+.mypage_content_box {
+    /* border: 1px solid lightgray; */
+    width: 1010px;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    padding-top: 10px;
+    padding-left: 25px;
+    float: left;
+}
+/* 마이페이지 콘텐츠 */
+.mypage_content_list {
+    /* border: 1px solid lightgray; */
+    width: 110px;
+    height: 15px;
+    /* margin-top: 20px; */
+    /* margin-bottom: 20px; */
+    /* margin-left: 30px; */
+    padding-top: 10px;
+    padding-left: 25px;
+    float: left;
+}
+/* 마이페이지 메인화면 콘텐츠 리스트 */
+.mypage_content_list_main {
+    width: 220px;
+    height: 140px;
+    border: 1px solid lightgray;
+    border-bottom: 4px solid #ffe88c;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    padding-top: 20px;
+    padding-left: 10px;
+    float: left;
+    border-radius: 10px;
+    
+}
+
+.mypage_content_list_main:hover {
+   	background-color: #eee;
+}
+
+.my_sell_image {
+    width: 100px;
+    height: 100px;
+    margin-left:0px;
+    object-fit: cover;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    overflow: hidden;
+    float: left;
+    
+}
+
+.my_sell_text{
+	width: 100px;
+	margin-left:15px;
+	
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: bold;
+    color: #333;
+    margin-top: 4px;
+    margin-bottom: 8px;
+	 float: left;
+}
+
+.my_sell_text:hover{
+	width: 100px;
+	height:100px;
+    /*background-color: gray;*/
+	 float: left;
+}
+
+.my_sell_title{
+	font-size:17px;
+    margin-bottom: 8px;
+}
+
+.my_sell_addr{
+	font-size: 13px;
+	line-height:15px;
+    margin-bottom: 15px;
+}
+
+
+.my_sell_price{
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    color:#1B7850;
+}
+
+.my_ut_price_heart {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.my_ut_heart_img_div {
+    display: flex;
+    margin-right: 5px;
+}
+
+.my_ut_heart {
+    object-fit: cover;
+    margin-bottom: 5px;
+}
+.my_ut_heart_cnt {
+    font-size: 13px;
+    font-family: 'Nanum Gothic', sans-serif;
+    margin-left: 2px;
+}
+
+.my_sell_complete{
+	width: 68px;
+	padding: 5px 10px;
+	background-color: #ddd;
+}
+
+
+
+
+
